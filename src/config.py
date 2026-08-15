@@ -105,9 +105,16 @@ SAMPLE_PER_YEAR = 5000    # sampled works per year, 2023-2026
 SAMPLE_SEED = 20260813    # fixed for reproducibility
 UNRESOLVABLE_SUBSAMPLE = 2000  # Crossref checks are slow; cap the subsample
 
-# Sensitivity/specificity grid for the misclassification bounds. The point
-# values bracket what the validation experiments in Kobak et al. (2024) and
-# Liang et al. (2025) support for marker-based detection at our threshold;
-# the bounds are reported over the whole grid, never at a single point.
-SENS_GRID = [0.45, 0.55, 0.65, 0.75]
-SPEC_GRID = [0.90, 0.93, 0.96, 0.99]
+# Sensitivity/specificity grid for the misclassification bounds.
+#
+# Requiring at least LEXICAL_THRESHOLD distinct markers from a 37-term list
+# flags 0.86% of 2023-onward papers, so the rule is high-specificity and
+# low-sensitivity by construction, and the grid has to sit in that regime.
+# The data also imposes a hard identification constraint: the prevalence
+# solves q = (P(S=1) - (1-spec)) / (sens - (1-spec)), so any specificity
+# below 1 - P(S=1) = 0.991 implies more false positives than observed
+# positives and admits no solution at all. An earlier grid centered on
+# 0.90-0.99 specificity was infeasible at every point for exactly that
+# reason.
+SENS_GRID = [0.03, 0.05, 0.10, 0.20]
+SPEC_GRID = [0.992, 0.995, 0.998, 0.999]

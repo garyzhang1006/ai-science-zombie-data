@@ -246,8 +246,19 @@ def bound_outcome(scored, count_col, denom_col):
             if (sol := corrected_rates(p_y_s1, p_y_s0, p_s1, sens, spec))]
     a_vals = [x[0] for x in sols]
     b_vals = [x[1] for x in sols]
+    # An empty solution set is a statement about the grid, not about the
+    # world, so say which constraint it violated instead of returning a
+    # silent null.
+    infeasible_reason = None
+    if not sols:
+        infeasible_reason = (
+            f"no (sens, spec) in the grid admits a prevalence in (0,1); "
+            f"specificity must exceed {1 - p_s1:.4f} and sensitivity must "
+            f"exceed P(S=1)={p_s1:.4f}")
     return {
         "n": int(len(d)),
+        "infeasible_reason": infeasible_reason,
+        "min_specificity_required": float(1 - p_s1),
         "p_proxy_positive": p_s1,
         "naive_rate_proxy_pos": p_y_s1,
         "naive_rate_proxy_neg": p_y_s0,
@@ -283,9 +294,28 @@ def main():
         res = fit_its(series[series.field == f], config.BREAK_MONTH)
         if res:
             per_field[f] = res
+    # The snapshot's last months are still filling in: June 2026 carries
+    # 9.0M references against a ~15M monthly norm. Under-indexed tail
+    # months can manufacture a downward post-break slope, so refit on
+    # progressively earlier endpoints and report whether the break survives.
+    truncation = {}
+    for end in ("2025-06", "2025-12", "2026-03", config.END_MONTH):
+        months = [m for m in month_range() if m <= end]
+        if len(months) < 30:
+            continue
+        res = fit_its(series[series.month <= end], config.BREAK_MONTH,
+                      months=months)
+        if res:
+            truncation[end] = {k: res[k] for k in
+                               ("level_change", "level_change_p",
+                                "slope_change", "slope_change_p",
+                                "n_months")}
+
     its = {"pooled": pooled, "placebos": placebos,
            "actual_abs_exceeds_placebo_share": quantile,
-           "per_field": per_field}
+           "placebo_max_abs": (float(np.max(np.abs(pl))) if pl else None),
+           "per_field": per_field,
+           "end_month_sensitivity": truncation}
     (config.OUT / "its_results.json").write_text(json.dumps(its, indent=2))
 
     cohort_out = read_shards("cohort")
@@ -313,9 +343,13 @@ def main():
     lex = read_shards("lexical")
     bounds = {}
     if len(lex):
-        lex["score"] = lex.abstract.map(lexical_score)
+        # The scan scores abstracts inline and stores only the score, since
+        # abstract text is a third of the snapshot. Older runs kept the
+        # text, so score it here when the column is present.
+        if "score" not in lex.columns:
+            lex["score"] = lex.abstract.map(lexical_score)
         lex["proxy"] = lex.score >= config.LEXICAL_THRESHOLD
-        lex.drop(columns=["abstract"]).to_csv(
+        lex.drop(columns=[c for c in ("abstract",) if c in lex.columns]).to_csv(
             config.OUT / "lexical_sample.csv", index=False)
         bounds["zombie"] = bound_outcome(lex, "zombie_count", "n_refs")
         bounds["n_sample"] = int(len(lex))
