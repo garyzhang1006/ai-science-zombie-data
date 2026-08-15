@@ -109,6 +109,13 @@ def classify(row):
     models, since those papers quote the artifact phrases on purpose."""
     title = (row.get("title") or "").lower()
     abstract = (row.get("abstract") or "").lower()
+    year = row.get("year")
+    if row.get("phrase") not in config.ARTIFACT_PHRASES:
+        return False, "phrase_retired"
+    if not year or year < config.PHRASE_ERA_CUTOFF:
+        # Cannot be unedited model output; kept in the audit file because
+        # these hits measure the filter's false-positive rate.
+        return False, "pre_chatgpt"
     if row.get("subfield_id") in config.META_SUBFIELD_IDS:
         return False, "ai_subfield"
     if re.search(config.META_TITLE_RE, title, re.I):
@@ -122,6 +129,37 @@ def classify(row):
     if not row.get("n_refs"):
         return False, "no_references"
     return True, "kept"
+
+
+def write_phrase_validation(df):
+    """Per-phrase false-positive rate, using the pre-ChatGPT era as a
+    negative control.
+
+    No paper published before 2023 can contain unedited ChatGPT output, so
+    every pre-2023 hit is a false positive by construction. The resulting
+    rate is what licenses the claim that a phrase makes model involvement
+    certain, and it is what exposed the stemming collision that removed
+    "Regenerate response" from the registry.
+    """
+    d = df.dropna(subset=["year"]).copy()
+    d["pre"] = d.year < config.PHRASE_ERA_CUTOFF
+    rows = []
+    for phrase, g in d.groupby("phrase"):
+        n = len(g)
+        pre = int(g.pre.sum())
+        rows.append({
+            "phrase": phrase,
+            "n_hits": n,
+            "n_pre_chatgpt": pre,
+            "false_positive_rate": round(pre / n, 4) if n else None,
+            "n_post_chatgpt": n - pre,
+            "retired": phrase not in config.ARTIFACT_PHRASES,
+        })
+    out = pd.DataFrame(rows).sort_values("n_hits", ascending=False)
+    out.to_csv(config.OUT / "phrase_validation.csv", index=False)
+    print("\nphrase validation (pre-ChatGPT hits are false positives):")
+    print(out.to_string(index=False))
+    return out
 
 
 def main():
@@ -139,6 +177,7 @@ def main():
     sample[["openalex_id", "doi", "title", "phrase", "keep",
             "reason"]].to_csv(config.OUT / "hand_validation_sample.csv",
                               index=False)
+    write_phrase_validation(df)
     print(f"kept {len(cohort)} / {len(df)}")
     print(df.reason.value_counts().head(10).to_string())
     if not complete:

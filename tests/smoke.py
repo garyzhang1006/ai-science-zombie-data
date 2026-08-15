@@ -164,13 +164,28 @@ def test_lexical_score():
 
 
 def test_classify_drops_meta_discussion():
-    meta = {"title": "Detecting ChatGPT text in journals", "abstract": "",
+    base = {"phrase": "as an AI language model", "year": 2024,
             "subfield_id": "", "type": "article", "n_refs": 30}
-    keep = {"title": "Irrigation effects on wheat yield",
-            "abstract": "field experiment in northern plains",
-            "subfield_id": "", "type": "article", "n_refs": 30}
+    meta = dict(base, title="Detecting ChatGPT text in journals",
+                abstract="")
+    keep = dict(base, title="Irrigation effects on wheat yield",
+                abstract="field experiment in northern plains")
     assert classify(meta)[0] is False
     assert classify(keep)[0] is True
+
+
+def test_classify_excludes_impossible_and_retired():
+    """A phrase in a pre-ChatGPT paper cannot be model output, and the
+    stem-colliding phrase must stay out of the cohort."""
+    base = {"title": "Irrigation effects on wheat yield", "abstract": "",
+            "subfield_id": "", "type": "article", "n_refs": 30}
+    old = dict(base, phrase="as an AI language model", year=2019)
+    retired = dict(base, phrase="Regenerate response", year=2024)
+    good = dict(base, phrase="as an AI language model", year=2024)
+    assert classify(old) == (False, "pre_chatgpt")
+    assert classify(retired) == (False, "phrase_retired")
+    assert classify(good)[0] is True
+    assert "Regenerate response" not in config.ARTIFACT_PHRASES
 
 
 def test_live_openalex_reports_quota():

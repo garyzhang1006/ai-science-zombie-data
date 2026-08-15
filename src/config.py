@@ -34,7 +34,15 @@ PLACEBO_MONTHS = [f"{y}-{m:02d}" for y in (2019, 2020, 2021) for m in range(1, 1
 BUFFER_MONTHS = 6
 
 # Artifact phrase registry (prong 2). Assembled from Strzelecki (2025) and
-# our own screening. Order matters only for reporting.
+# our own screening.
+#
+# OpenAlex full-text search is STEMMED, so a phrase whose words are common
+# scientific vocabulary collides badly. "Regenerate response" was in this
+# list and matched "regenerative response": 89.4% of its hits predate
+# ChatGPT, and they are zebrafish and stem-cell regeneration papers. It is
+# excluded, and the pre-ChatGPT hit rate of every surviving phrase is
+# reported in out/phrase_validation.csv as a measured false-positive rate
+# rather than an assumption. See PHRASE_ERA_CUTOFF.
 ARTIFACT_PHRASES = [
     "as an AI language model",
     "as a large language model, I",
@@ -43,8 +51,12 @@ ARTIFACT_PHRASES = [
     "I don't have access to real-time",
     "as an AI developed by OpenAI",
     "my knowledge cutoff",
-    "Regenerate response",
 ]
+
+# ChatGPT was released 2022-11-30, so an artifact phrase in a paper
+# published before 2023 cannot be unedited model output. Those hits both
+# get excluded from the cohort and serve as the filter's negative control.
+PHRASE_ERA_CUTOFF = 2023
 
 # Meta-discussion filter (papers ABOUT LLMs quote the phrases deliberately).
 META_TITLE_RE = (
