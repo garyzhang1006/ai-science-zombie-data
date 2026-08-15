@@ -83,7 +83,9 @@ def _throttled_get(kind, url, params=None, max_tries=12):
             else:
                 time.sleep(min(2 ** attempt * 2, 120))
             continue
-        if r.status_code == 404:
+        if r.status_code in (400, 404):
+            # A single unusable identifier must not abort a harvest that
+            # has already spent an hour on the other 9,000.
             return None
         r.raise_for_status()
     raise RuntimeError(f"gave up after {max_tries} tries: {url}")
@@ -134,12 +136,21 @@ def short_id(openalex_url):
 
 
 def norm_doi(doi):
+    """Normalize a DOI for lookup.
+
+    Publisher-scraped DOIs often carry tracking query strings, e.g.
+    "10.1021/acs.jafc.2c04673?ref=article_openpdf". Crossref rejects those
+    with a 400, so the suffix has to go before the DOI is used as a key or
+    a URL path.
+    """
     if not doi:
         return None
-    d = doi.strip().lower()
-    for prefix in ("https://doi.org/", "http://doi.org/", "doi:"):
+    d = str(doi).strip().lower()
+    for prefix in ("https://doi.org/", "http://doi.org/", "https://dx.doi.org/",
+                   "http://dx.doi.org/", "doi:"):
         if d.startswith(prefix):
             d = d[len(prefix):]
+    d = d.split("?")[0].split("#")[0].rstrip(".,;)")
     return d or None
 
 
