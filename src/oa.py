@@ -20,6 +20,33 @@ _session.headers["User-Agent"] = (
 _last_call = {"oa": 0.0, "cr": 0.0}
 _MIN_INTERVAL = {"oa": 0.15, "cr": 0.05}  # ~6.5/s OpenAlex, ~20/s Crossref
 
+# Live view of the OpenAlex credit budget, refreshed from response headers.
+quota = {"limit": None, "remaining": None, "usd_remaining": None,
+         "reset_seconds": None}
+
+
+class QuotaExhausted(RuntimeError):
+    """OpenAlex free-tier budget for the day is spent.
+
+    The free tier allows 1,000 calls or $0.10 per day, whichever binds
+    first, and a full-text search costs ten times a metadata call. Callers
+    catch this, checkpoint, and resume after the reset rather than
+    hammering a closed door.
+    """
+
+
+def _note_quota(headers):
+    def _num(key, cast):
+        v = headers.get(key)
+        try:
+            return cast(v)
+        except (TypeError, ValueError):
+            return None
+    quota["limit"] = _num("x-ratelimit-limit", int)
+    quota["remaining"] = _num("x-ratelimit-remaining", int)
+    quota["usd_remaining"] = _num("x-ratelimit-remaining-usd", float)
+    quota["reset_seconds"] = _num("x-ratelimit-reset", int)
+
 
 def _throttled_get(kind, url, params=None, max_tries=12):
     """Long harvests must survive sustained 429 spells (shared datacenter
@@ -34,8 +61,21 @@ def _throttled_get(kind, url, params=None, max_tries=12):
         except requests.RequestException:
             time.sleep(min(2 ** attempt, 60))
             continue
+        if kind == "oa":
+            _note_quota(r.headers)
         if r.status_code == 200:
             return r.json()
+        if r.status_code in (402, 429) and kind == "oa":
+            # Distinguish a spent daily budget from ordinary throttling:
+            # waiting out the former takes hours, so callers must be told.
+            spent = (quota["remaining"] is not None
+                     and quota["remaining"] <= 0)
+            spent = spent or (quota["usd_remaining"] is not None
+                              and quota["usd_remaining"] <= 0)
+            if spent or r.status_code == 402:
+                raise QuotaExhausted(
+                    f"OpenAlex daily budget spent; resets in "
+                    f"{(quota['reset_seconds'] or 0) / 3600:.1f} h")
         if r.status_code in (429, 500, 502, 503):
             retry_after = r.headers.get("Retry-After")
             if retry_after and retry_after.isdigit():
