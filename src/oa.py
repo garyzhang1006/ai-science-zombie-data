@@ -18,10 +18,12 @@ _session.headers["User-Agent"] = (
 )
 
 _last_call = {"oa": 0.0, "cr": 0.0}
-_MIN_INTERVAL = {"oa": 0.11, "cr": 0.05}  # ~9/s OpenAlex, ~20/s Crossref
+_MIN_INTERVAL = {"oa": 0.15, "cr": 0.05}  # ~6.5/s OpenAlex, ~20/s Crossref
 
 
-def _throttled_get(kind, url, params=None, max_tries=6):
+def _throttled_get(kind, url, params=None, max_tries=12):
+    """Long harvests must survive sustained 429 spells (shared datacenter
+    IPs get throttled hard); tolerate ~20 min of failure before giving up."""
     for attempt in range(max_tries):
         wait = _MIN_INTERVAL[kind] - (time.time() - _last_call[kind])
         if wait > 0:
@@ -30,12 +32,16 @@ def _throttled_get(kind, url, params=None, max_tries=6):
         try:
             r = _session.get(url, params=params, timeout=60)
         except requests.RequestException:
-            time.sleep(2 ** attempt)
+            time.sleep(min(2 ** attempt, 60))
             continue
         if r.status_code == 200:
             return r.json()
         if r.status_code in (429, 500, 502, 503):
-            time.sleep(min(2 ** attempt * 2, 60))
+            retry_after = r.headers.get("Retry-After")
+            if retry_after and retry_after.isdigit():
+                time.sleep(min(int(retry_after) + 1, 300))
+            else:
+                time.sleep(min(2 ** attempt * 2, 120))
             continue
         if r.status_code == 404:
             return None
