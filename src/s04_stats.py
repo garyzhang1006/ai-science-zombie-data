@@ -177,9 +177,33 @@ def bootstrap_ratio(art, ctl, count_col, denom_col, n_boot=10_000):
 
 # ------------------------------------------------------------------- bounds
 
+def abstract_vocabulary(abstract):
+    """Lowercased word set of an abstract.
+
+    OpenAlex stores abstracts as an inverted index serialized to JSON, so
+    the words arrive as dictionary keys wrapped in quotes and punctuation.
+    Splitting that string naively finds no markers at all, which would
+    silently drive the proxy-positive share to zero and leave the bounds
+    unidentified. Plain text is also accepted, for tests and for any other
+    corpus.
+    """
+    if not abstract:
+        return set()
+    text = str(abstract)
+    words = None
+    if text.lstrip().startswith("{"):
+        try:
+            words = json.loads(text).keys()
+        except (ValueError, AttributeError):
+            words = None
+    if words is None:
+        words = text.split()
+    return {w.strip(' ",:{}[]().;').lower() for w in words}
+
+
 def lexical_score(abstract):
-    words = set(str(abstract).lower().replace(",", " ").split())
-    return sum(1 for m in config.LEXICAL_MARKERS if m in words)
+    vocab = abstract_vocabulary(abstract)
+    return sum(1 for m in config.LEXICAL_MARKERS if m in vocab)
 
 
 def corrected_rates(p_y_s1, p_y_s0, p_s1, sens, spec):

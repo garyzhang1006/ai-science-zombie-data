@@ -35,6 +35,7 @@ import pyarrow.compute as pc
 import config
 import oa
 import snapshot
+from s04_stats import lexical_score
 
 BASE_COLUMNS = ["id", "doi", "publication_date", "referenced_works",
                 "referenced_works_count", "primary_topic", "type",
@@ -114,6 +115,35 @@ def zombie_counts(refs_col, pub_days, retracted_ids, elig_days):
     return np.bincount(owner[is_zombie], minlength=n_rows).astype(np.int64)
 
 
+class Reservoir:
+    """Uniform sample of a stream, bounded in memory (Algorithm R).
+
+    A venue-year can hold hundreds of thousands of papers and the corpus
+    holds half a billion, so keeping every candidate is not an option.
+    Taking the first N instead of a random N would bias the sample toward
+    whichever update partition happened to be scanned first, which
+    correlates with publication date.
+    """
+
+    def __init__(self, cap, seed):
+        self.cap = cap
+        self.rng = np.random.default_rng(seed)
+        self.seen = 0
+        self.items = []
+
+    def offer(self, item):
+        self.seen += 1
+        if len(self.items) < self.cap:
+            self.items.append(item)
+        else:
+            j = int(self.rng.integers(0, self.seen))
+            if j < self.cap:
+                self.items[j] = item
+
+    def __len__(self):
+        return len(self.items)
+
+
 def struct_path(col, path, default=""):
     """Pull a nested struct field as a python list, tolerating nulls."""
     cur = col
@@ -156,11 +186,11 @@ def main():
     done = set(done_path.read_text().split()) if done_path.exists() else set()
 
     numer, denom = {}, {}
-    cohort_rows, control_rows, lexical_rows = [], [], []
-
-    def bump(store, keys, values):
-        for k, v in zip(keys, values):
-            store[k] = store.get(k, 0) + v
+    cohort_rows = []
+    # Bounded samples: controls per venue-year, lexical rows per shard.
+    control_pools = {}
+    lex_reservoir = Reservoir(config.LEXICAL_SAMPLE_CAP,
+                              config.SAMPLE_SEED + args.shard)
 
     def flush():
         pd.DataFrame([{"month": m, "field": f, "zombie_events": v}
@@ -169,9 +199,11 @@ def main():
         pd.DataFrame([{"month": m, "field": f, "works": w, "refs": r}
                       for (m, f), (w, r) in denom.items()]).to_csv(
             config.DATA / f"s03_denom_{tag}.csv", index=False)
+        control_rows = [r for pool in control_pools.values()
+                        for r in pool.items]
         for name, rows in (("cohort", cohort_rows),
                            ("control", control_rows),
-                           ("lexical", lexical_rows)):
+                           ("lexical", lex_reservoir.items)):
             if rows:
                 pd.DataFrame(rows).to_csv(
                     config.DATA / f"s03_{name}_{tag}.csv", index=False)
@@ -277,21 +309,31 @@ def main():
                         if is_cohort[j]:
                             cohort_rows.append(rec)
                         elif (sid, year) in venue_years:
-                            control_rows.append(rec)
+                            pool = control_pools.get((sid, year))
+                            if pool is None:
+                                pool = control_pools[(sid, year)] = Reservoir(
+                                    config.CONTROL_POOL_PER_VENUE_YEAR,
+                                    config.SAMPLE_SEED + int(
+                                        stable_fraction(f"{sid}:{year}")
+                                        * 1e6))
+                            pool.offer(rec)
                     if want_lex[j] and abs_sel and abs_sel[k]:
-                        lexical_rows.append({
+                        # Score inline and keep the score, not the text:
+                        # abstracts are a third of the snapshot and only
+                        # the marker count feeds the bounds.
+                        lex_reservoir.offer({
                             "openalex_id": wid, "year": year,
                             "n_refs": int(n_refs[j]),
                             "zombie_count": int(zc[j]),
-                            "abstract": str(abs_sel[k])[:4000],
+                            "score": lexical_score(abs_sel[k]),
                         })
         done.add(key)
         if i % 10 == 0:
             flush()
             print(f"  {i}/{len(paths)} files | zombie events "
                   f"{sum(numer.values())} | cohort {len(cohort_rows)} | "
-                  f"controls {len(control_rows)} | lexical "
-                  f"{len(lexical_rows)}", flush=True)
+                  f"control pools {len(control_pools)} | lexical "
+                  f"{len(lex_reservoir)}/{lex_reservoir.seen}", flush=True)
 
     flush()
     summary = {
@@ -303,8 +345,10 @@ def main():
         "zombie_events": int(sum(numer.values())),
         "works_counted": int(sum(w for w, _ in denom.values())),
         "cohort_rows": len(cohort_rows),
-        "control_rows": len(control_rows),
-        "lexical_rows": len(lexical_rows),
+        "control_venue_years": len(control_pools),
+        "control_rows": sum(len(p) for p in control_pools.values()),
+        "lexical_rows": len(lex_reservoir),
+        "lexical_seen": lex_reservoir.seen,
     }
     (config.DATA / f"s03_summary_{tag}.json").write_text(
         json.dumps(summary, indent=2))

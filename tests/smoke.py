@@ -163,6 +163,28 @@ def test_lexical_score():
     assert lexical_score("we measured the wheat yield") == 0
 
 
+def test_lexical_score_reads_inverted_index():
+    """OpenAlex stores abstracts as inverted-index JSON. Scoring the raw
+    string finds no markers, which would silently zero out the proxy and
+    leave the bounds unidentified."""
+    inv = ('{"We": [0], "delve": [1], "into": [2], "intricate": [3], '
+           '"realm": [4], "of": [5], "wheat": [6]}')
+    assert lexical_score(inv) == 3, lexical_score(inv)
+    plain = '{"Wheat": [0], "yield": [1], "rose": [2]}'
+    assert lexical_score(plain) == 0
+
+
+def test_reservoir_is_uniform_and_bounded():
+    from s03_scan import Reservoir
+    r = Reservoir(cap=50, seed=1)
+    for i in range(10_000):
+        r.offer(i)
+    assert len(r) == 50 and r.seen == 10_000
+    # A uniform sample of 0..9999 has mean near 5000; taking the first 50
+    # would give ~25, which is the bias this guards against.
+    assert 3000 < np.mean(r.items) < 7000, np.mean(r.items)
+
+
 def test_classify_drops_meta_discussion():
     base = {"phrase": "as an AI language model", "year": 2024,
             "subfield_id": "", "type": "article", "n_refs": 30}

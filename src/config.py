@@ -78,6 +78,11 @@ META_SUBFIELD_IDS = {
 N_CONTROLS = 5
 MATCH_TOL = 0.25          # relative tolerance on reference-list length
 CONTROL_POOL_SIZE = 40    # candidates fetched per artifact paper before ranking
+# A single venue-year can hold hundreds of thousands of papers (PLOS ONE
+# alone), so the scan reservoir-samples candidates instead of keeping all
+# of them; matching only ever needs a few dozen per artifact paper.
+CONTROL_POOL_PER_VENUE_YEAR = 60
+LEXICAL_SAMPLE_CAP = 150_000   # reservoir size per shard
 
 # Unresolvable-reference check (Crossref).
 FUZZY_THRESHOLD = 85      # rapidfuzz token_sort_ratio, 0-100
