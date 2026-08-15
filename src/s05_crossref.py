@@ -14,7 +14,9 @@ Input: out/matches.csv plus the cohort/control rows from stage 3.
 Output: out/unresolvable.csv (openalex_id, group, n_refs_crossref,
         n_unresolvable)
 """
+import argparse
 import sys
+import time
 
 import pandas as pd
 from rapidfuzz import fuzz
@@ -58,6 +60,16 @@ def ref_unresolvable(ref):
     return score < config.FUZZY_THRESHOLD
 
 
+def ckpt_done(work_id):
+    """Cheap membership test used before the checkpoint object exists, so a
+    shard can report how much of its slice is already covered."""
+    path = config.DATA / "s05_unresolvable.done"
+    if not hasattr(ckpt_done, "_cache"):
+        ckpt_done._cache = (set(path.read_text().split())
+                            if path.exists() else set())
+    return work_id in ckpt_done._cache
+
+
 def papers_to_check():
     def read(name):
         parts = [pd.read_csv(p) for p in config.DATA.glob(f"s03_{name}_*.csv")]
@@ -82,15 +94,37 @@ def papers_to_check():
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--shard", type=int, default=0)
+    ap.add_argument("--n-shards", type=int, default=1)
+    ap.add_argument("--time-budget-hours", type=float, default=10.5)
+    args = ap.parse_args()
+    deadline = time.time() + args.time_budget_hours * 3600
+
     papers = papers_to_check()
     if not papers:
         print("nothing to check; run stages 1-4 first")
         return 1
-    print(f"{len(papers)} papers with DOIs to check against Crossref")
+    # Each paper costs one lookup plus one check per reference, so a full
+    # pass runs far past a single session. Sorting first makes the split
+    # deterministic; the checkpoint is keyed by work id, so shards never
+    # duplicate each other's work even when rerun.
+    papers.sort(key=lambda p: p["openalex_id"])
+    mine = [p for i, p in enumerate(papers)
+            if i % args.n_shards == args.shard]
+    todo = [p for p in mine if not ckpt_done(p["openalex_id"])]
+    print(f"shard {args.shard}/{args.n_shards}: {len(mine)} assigned, "
+          f"{len(todo)} still to do (of {len(papers)} total)", flush=True)
+
     ckpt = oa.Checkpoint("s05_unresolvable")
-    for i, p in enumerate(papers):
+    stopped = False
+    for i, p in enumerate(todo):
         if ckpt.is_done(p["openalex_id"]):
             continue
+        if time.time() > deadline:
+            stopped = True
+            print(">>> time budget reached; checkpoint kept", flush=True)
+            break
         cr = oa.cr_get(f"/works/{p['doi']}")
         refs = (cr or {}).get("message", {}).get("reference") or []
         out = []
@@ -103,7 +137,8 @@ def main():
             }]
         ckpt.write(out, key=p["openalex_id"])
         if i % 25 == 0:
-            print(f"  {i}/{len(papers)}", flush=True)
+            print(f"  {i}/{len(todo)}", flush=True)
+    print("COMPLETE" if not stopped else "INCOMPLETE_RESUMABLE", flush=True)
     df = pd.DataFrame(ckpt.load_results())
     df.to_csv(config.OUT / "unresolvable.csv", index=False)
     if len(df):
