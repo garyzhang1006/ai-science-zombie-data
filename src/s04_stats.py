@@ -231,7 +231,10 @@ def corrected_rates(p_y_s1, p_y_s0, p_s1, sens, spec):
     return float(np.clip(a, 0, 1)), float(np.clip(b, 0, 1))
 
 
-def bound_outcome(scored, count_col, denom_col):
+def bound_outcome(scored, count_col, denom_col, sens_grid=None,
+                  spec_grid=None):
+    sens_grid = sens_grid or config.SENS_GRID
+    spec_grid = spec_grid or config.SPEC_GRID
     d = scored.dropna(subset=[count_col, denom_col])
     d = d[d[denom_col] > 0]
     if not len(d):
@@ -242,7 +245,7 @@ def bound_outcome(scored, count_col, denom_col):
     if not 0 < p_s1 < 1:
         return None
     p_y_s1, p_y_s0 = float(y[s == 1].mean()), float(y[s == 0].mean())
-    sols = [sol for sens in config.SENS_GRID for spec in config.SPEC_GRID
+    sols = [sol for sens in sens_grid for spec in spec_grid
             if (sol := corrected_rates(p_y_s1, p_y_s0, p_s1, sens, spec))]
     a_vals = [x[0] for x in sols]
     b_vals = [x[1] for x in sols]

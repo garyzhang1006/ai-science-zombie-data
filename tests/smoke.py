@@ -128,9 +128,28 @@ def test_bounds_contain_truth_and_beat_naive():
     event = rng.random(n) < p_event
     scored = pd.DataFrame({"proxy": proxy, "count": event.astype(int),
                            "denom": 1})
-    res = bound_outcome(scored, "count", "denom")
+    # Grids matched to the simulation, not to production: the production
+    # grid is tuned to a rule that flags under 1% of papers, and this
+    # simulation flags 11%.
+    res = bound_outcome(scored, "count", "denom",
+                        sens_grid=[0.45, 0.65, 0.85],
+                        spec_grid=[0.90, 0.95, 0.99])
     assert res["bound_ai_lo"] <= 0.30 <= res["bound_ai_hi"], res
     assert res["naive_rate_proxy_pos"] < 0.30, res["naive_rate_proxy_pos"]
+
+
+def test_production_grid_is_feasible_at_observed_rate():
+    """The identification constraint that made the first grid return
+    nothing: specificity must exceed 1 - P(S=1), and the observed flag rate
+    is 0.86%, so every grid specificity has to clear 0.9914."""
+    p_s1 = 0.00856
+    feasible = [(sens, spec) for sens in config.SENS_GRID
+                for spec in config.SPEC_GRID
+                if corrected_rates(0.0074, 0.0011, p_s1, sens, spec)]
+    assert len(feasible) == len(config.SENS_GRID) * len(config.SPEC_GRID), (
+        f"only {len(feasible)} of "
+        f"{len(config.SENS_GRID) * len(config.SPEC_GRID)} grid points solve")
+    assert min(config.SPEC_GRID) > 1 - p_s1, min(config.SPEC_GRID)
 
 
 def test_bootstrap_ratio():
