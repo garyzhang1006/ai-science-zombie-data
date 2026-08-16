@@ -13,11 +13,11 @@
   "n_matched_pairs": 7644,
   "unresolvable": {
     "artifact_rate_per_1000": 138.8375709406026,
-    "control_rate_per_1000": 127.75665399239544,
-    "ratio": 1.086734558255312,
-    "ratio_ci_lo": 1.0041065127839572,
-    "ratio_ci_hi": 1.1728380014894846,
+    "control_rate_per_1000": 127.73742992150034,
+    "ratio": 1.0868981082985913,
+    "ratio_ci_lo": 1.0050969548596629,
+    "ratio_ci_hi": 1.1738868931763644,
     "n_artifact": 1385,
-    "n_control": 5957
+    "n_control": 6488
   }
 }
