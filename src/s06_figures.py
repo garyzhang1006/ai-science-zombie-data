@@ -82,32 +82,37 @@ def fig2():
 
 
 def fig3():
+    """Bounds by reference-count stratum.
+
+    The unrestricted comparison is dominated by article type: flagged
+    papers average 44.7 references against 9.2 for the rest, and a
+    per-paper "at least one event" outcome rises with reference count.
+    Holding reference count fixed is what makes the contrast interpretable,
+    so the strata are the figure rather than a footnote.
+    """
     b = json.loads((config.OUT / "bounds.json").read_text())
-    panels = [(n, b[k]) for n, k in (("Zombie", "zombie"),
-                                     ("Unresolvable", "unresolvable"))
-              if isinstance(b.get(k), dict)]
-    if not panels:
-        print("skip fig3: no bounds yet")
+    strata = b.get("by_ref_stratum", {})
+    usable = [(k, v) for k, v in strata.items()
+              if v and v.get("bound_ai_lo") is not None]
+    if not usable:
+        print("skip fig3: no feasible strata")
         return
-    fig, axes = plt.subplots(1, len(panels), figsize=(3.6 * len(panels), 3),
-                             squeeze=False)
-    for ax, (name, d) in zip(axes[0], panels):
-        if d.get("bound_ai_lo") is None:
-            ax.set_title(f"{name}: no feasible grid points", fontsize=8)
-            continue
-        ax.vlines([0, 1],
-                  [d["bound_ai_lo"], d["bound_nonai_lo"]],
-                  [d["bound_ai_hi"], d["bound_nonai_hi"]],
-                  color="steelblue", lw=6, alpha=0.7, label="Set-identified")
-        ax.plot([0, 1], [d["naive_rate_proxy_pos"],
-                         d["naive_rate_proxy_neg"]], "ko",
-                label="Naive (proxy)")
-        ax.set_xlim(-0.5, 1.5)
-        ax.set_xticks([0, 1])
-        ax.set_xticklabels(["AI-assisted", "Not AI-assisted"], fontsize=8)
-        ax.set_title(name, fontsize=9)
-        ax.set_ylabel("P(at least one event)")
-    axes[0][0].legend(fontsize=7)
+    fig, ax = plt.subplots(figsize=(6.4, 3.4))
+    labels, xs = [], np.arange(len(usable))
+    for i, (k, v) in enumerate(usable):
+        lo, hi = k.split("-")
+        labels.append(f"{lo}\u2013{hi}" if int(hi) < 10**5 else f"{lo}+")
+        ax.vlines(i - 0.11, v["bound_ai_lo"] * 100, v["bound_ai_hi"] * 100,
+                  color="crimson", lw=7, alpha=0.85,
+                  label="AI-assisted" if i == 0 else None)
+        ax.vlines(i + 0.11, v["bound_nonai_lo"] * 100,
+                  v["bound_nonai_hi"] * 100, color="steelblue", lw=7,
+                  alpha=0.85, label="Not AI-assisted" if i == 0 else None)
+    ax.set_xticks(xs)
+    ax.set_xticklabels(labels)
+    ax.set_xlabel("References in the citing paper")
+    ax.set_ylabel("P(at least one zombie citation), %")
+    ax.legend(fontsize=8, loc="upper left")
     fig.tight_layout()
     fig.savefig(config.OUT / "fig3_bounds.pdf")
     print("wrote fig3")

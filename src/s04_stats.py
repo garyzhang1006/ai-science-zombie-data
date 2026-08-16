@@ -258,11 +258,21 @@ def corrected_rates(p_y_s1, p_y_s0, p_s1, sens, spec):
 
 
 def bound_outcome(scored, count_col, denom_col, sens_grid=None,
-                  spec_grid=None):
+                  spec_grid=None, min_refs=0):
+    """Set-identified rates of carrying at least one event.
+
+    min_refs holds reference-list length roughly fixed. The outcome is a
+    per-paper indicator, so it rises with the number of references a paper
+    carries, and the lexical rule selects long-abstract full articles that
+    carry many. Without the restriction the comparison is mostly between
+    article types rather than between writing practices.
+    """
     sens_grid = sens_grid or config.SENS_GRID
     spec_grid = spec_grid or config.SPEC_GRID
     d = scored.dropna(subset=[count_col, denom_col])
     d = d[d[denom_col] > 0]
+    if min_refs:
+        d = d[d[denom_col] >= min_refs]
     if not len(d):
         return None
     y = (d[count_col] > 0).astype(int)
@@ -286,6 +296,9 @@ def bound_outcome(scored, count_col, denom_col, sens_grid=None,
             f"exceed P(S=1)={p_s1:.4f}")
     return {
         "n": int(len(d)),
+        "min_refs": int(min_refs),
+        "mean_refs_proxy_pos": float(d[d.proxy][denom_col].mean()),
+        "mean_refs_proxy_neg": float(d[~d.proxy][denom_col].mean()),
         "infeasible_reason": infeasible_reason,
         "min_specificity_required": float(1 - p_s1),
         "p_proxy_positive": p_s1,
@@ -380,7 +393,19 @@ def main():
         lex["proxy"] = lex.score >= config.LEXICAL_THRESHOLD
         lex.drop(columns=[c for c in ("abstract",) if c in lex.columns]).to_csv(
             config.OUT / "lexical_sample.csv", index=False)
-        bounds["zombie"] = bound_outcome(lex, "zombie_count", "n_refs")
+        # Primary specification holds reference-list length comparable;
+        # the unrestricted fit is kept as a diagnostic because the gap
+        # between them is what shows the confound.
+        bounds["zombie"] = bound_outcome(lex, "zombie_count", "n_refs",
+                                         min_refs=config.BOUNDS_MIN_REFS)
+        bounds["zombie_unrestricted"] = bound_outcome(
+            lex, "zombie_count", "n_refs")
+        bounds["by_ref_stratum"] = {}
+        for lo, hi in ((20, 40), (40, 60), (60, 100), (100, 10**6)):
+            sub = lex[(lex.n_refs >= lo) & (lex.n_refs < hi)]
+            r = bound_outcome(sub, "zombie_count", "n_refs")
+            if r:
+                bounds["by_ref_stratum"][f"{lo}-{hi}"] = r
         bounds["n_sample"] = int(len(lex))
         bounds["proxy_positive_share"] = float(lex.proxy.mean())
     bounds.update({"sens_grid": config.SENS_GRID,

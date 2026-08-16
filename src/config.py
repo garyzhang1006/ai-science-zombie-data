@@ -118,3 +118,12 @@ UNRESOLVABLE_SUBSAMPLE = 2000  # Crossref checks are slow; cap the subsample
 # reason.
 SENS_GRID = [0.03, 0.05, 0.10, 0.20]
 SPEC_GRID = [0.992, 0.995, 0.998, 0.999]
+
+# The bounds outcome is "carries at least one zombie citation," which rises
+# mechanically with reference-list length, and the lexical rule needs two
+# markers in an abstract, so it selects long-abstract full articles. Over
+# the unrestricted sample, flagged papers average 44.7 references against
+# 9.2 for the rest, and most of the apparent contrast is that gap rather
+# than anything about AI. Restricting to papers with at least this many
+# references compares full articles to full articles (61.2 against 50.8).
+BOUNDS_MIN_REFS = 20
