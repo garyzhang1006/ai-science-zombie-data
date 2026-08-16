@@ -26,34 +26,51 @@ def fig1():
     pooled = (series.groupby("month")
               .agg(zombie=("zombie_events", "sum"), refs=("refs", "sum"))
               .reindex(months))
-    rate = pooled.zombie / pooled.refs * 1e4
+    rate = (pooled.zombie / pooled.refs * 1e4).values
 
-    fig, ax = plt.subplots(figsize=(7, 4.2))
+    fig, (ax, iax) = plt.subplots(
+        1, 2, figsize=(9.2, 3.8), gridspec_kw={"width_ratios": [3, 1]})
+
     top = series.groupby("field").zombie_events.sum().nlargest(5).index
     for f in top:
         sub = series[series.field == f].set_index("month").reindex(months)
         ax.plot(range(len(months)), sub.zombie_events / sub.refs * 1e4,
-                lw=0.8, alpha=0.45, label=f)
-    ax.plot(range(len(months)), rate.values, "k-", lw=2, label="All fields")
+                lw=0.7, alpha=0.4, label=f if len(f) < 30 else f[:27] + "...")
+    ax.plot(range(len(months)), rate, "k-", lw=2.1, label="All fields",
+            zorder=5)
     if config.BREAK_MONTH in months:
         ax.axvline(months.index(config.BREAK_MONTH), color="crimson",
-                   ls="--", lw=1)
+                   ls="--", lw=1.2, zorder=4)
+        ax.annotate("ChatGPT", xy=(months.index(config.BREAK_MONTH), 0.2),
+                    xytext=(4, 0), textcoords="offset points",
+                    fontsize=7, color="crimson")
     ax.set_xticks(range(0, len(months), 12))
-    ax.set_xticklabels([m[:4] for m in months[::12]])
-    ax.set_ylabel("Zombie citations per 10,000 references")
-    ax.legend(fontsize=7, ncol=2)
+    ax.set_xticklabels([m[:4] for m in months[::12]], fontsize=8)
+    ax.set_ylabel("Zombie citations per 10,000 references", fontsize=9)
+    ax.set_ylim(0, None)
+    # Legend below the axes: an inset legend collided with the panel.
+    ax.legend(fontsize=6.5, ncol=2, loc="upper center",
+              bbox_to_anchor=(0.5, -0.13), frameon=False)
 
     pl = [p["level_change"] for p in its.get("placebos", [])]
+    actual = (its.get("pooled") or {}).get("level_change")
     if pl:
-        inset = fig.add_axes((0.62, 0.55, 0.25, 0.28))
-        inset.hist(pl, bins=12, color="grey")
-        if its.get("pooled"):
-            inset.axvline(its["pooled"]["level_change"], color="crimson",
-                          lw=1.5)
-        inset.set_title("Placebo breaks", fontsize=7)
-        inset.tick_params(labelsize=6)
+        iax.hist(pl, bins=12, color="0.6", edgecolor="white", linewidth=0.4)
+        if actual is not None:
+            iax.axvline(actual, color="crimson", lw=1.8)
+            iax.annotate("observed", xy=(actual, 0), xytext=(-3, 4),
+                         textcoords="offset points", fontsize=6.5,
+                         color="crimson", rotation=90, va="bottom", ha="right")
+        # Pad the axis so the observed line is not flush against the frame.
+        lo, hi = min(pl + [actual]), max(pl + [actual])
+        pad = 0.12 * (hi - lo)
+        iax.set_xlim(lo - pad, hi + pad)
+        iax.set_title("36 placebo breaks", fontsize=8)
+        iax.set_xlabel("Level change per 10,000", fontsize=7.5)
+        iax.tick_params(labelsize=6.5)
     fig.tight_layout()
-    fig.savefig(config.OUT / "fig1_population_series.pdf")
+    fig.savefig(config.OUT / "fig1_population_series.pdf",
+                bbox_inches="tight")
     print("wrote fig1")
 
 
