@@ -76,16 +76,20 @@ def _throttled_get(kind, url, params=None, max_tries=12):
                 raise QuotaExhausted(
                     f"OpenAlex daily budget spent; resets in "
                     f"{(quota['reset_seconds'] or 0) / 3600:.1f} h")
-        if r.status_code in (429, 500, 502, 503):
+        # Retry every transient class rather than an enumerated list:
+        # timeouts, rate limits, and any server-side error. Listing codes
+        # one at a time has cost three long runs already (503, then 504).
+        if r.status_code in (408, 429) or r.status_code >= 500:
             retry_after = r.headers.get("Retry-After")
             if retry_after and retry_after.isdigit():
                 time.sleep(min(int(retry_after) + 1, 300))
             else:
                 time.sleep(min(2 ** attempt * 2, 120))
             continue
-        if r.status_code in (400, 404):
+        if 400 <= r.status_code < 500:
             # A single unusable identifier must not abort a harvest that
-            # has already spent an hour on the other 9,000.
+            # has already spent hours on the other thousands of records.
+            print(f"  skipping {r.status_code} on {url}", flush=True)
             return None
         r.raise_for_status()
     raise RuntimeError(f"gave up after {max_tries} tries: {url}")
