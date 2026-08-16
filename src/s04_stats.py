@@ -46,9 +46,35 @@ def month_range():
     return months
 
 
+def shard_files(prefix):
+    """Partial aggregates belonging to exactly one complete sharding.
+
+    Every file is tagged "<i>of<n>". A debug run over a single file leaves
+    behind a tag like "2130of2446" whose parquet files are also covered by
+    the real shards, and summing both double-counts them. Only the tag with
+    the most files is kept, and anything else is reported rather than
+    silently folded in.
+    """
+    import re
+    groups = {}
+    for p in config.DATA.glob(f"{prefix}_*.csv"):
+        m = re.search(r"_(\d+)of(\d+)\.csv$", p.name)
+        if m:
+            groups.setdefault(int(m.group(2)), []).append(p)
+    if not groups:
+        return []
+    n = max(groups, key=lambda k: len(groups[k]))
+    for other in groups:
+        if other != n:
+            print(f"  ignoring {len(groups[other])} stray {prefix} file(s) "
+                  f"with tag *of{other}; using the {len(groups[n])}-file "
+                  f"sharding of {n}")
+    return sorted(groups[n])
+
+
 def merge_shards():
-    num = [pd.read_csv(p) for p in config.DATA.glob("s03_numer_*.csv")]
-    den = [pd.read_csv(p) for p in config.DATA.glob("s03_denom_*.csv")]
+    num = [pd.read_csv(p) for p in shard_files("s03_numer")]
+    den = [pd.read_csv(p) for p in shard_files("s03_denom")]
     if not den:
         raise SystemExit("run stage 3 first (no s03_denom_*.csv)")
     num = (pd.concat(num).groupby(["month", "field"], as_index=False)

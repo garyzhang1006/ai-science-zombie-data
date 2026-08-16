@@ -1,5 +1,9 @@
 data/
 out/
+!results/
 __pycache__/
 *.pyc
 .DS_Store
+
+# results/ is published on purpose: the paper points readers here
+!results/

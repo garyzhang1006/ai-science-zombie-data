@@ -1,0 +1,141 @@
+[{"stream_name":"stderr","time":0.939217866,"data":"Cloning into 'repo'...\n"}
+,{"stream_name":"stdout","time":8.161184174,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 10.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":10.49782869,"data":"\n"}
+,{"stream_name":"stdout","time":10.49787813,"data":"=== s00 ===\n"}
+,{"stream_name":"stdout","time":12.739377531,"data":"downloading Retraction Watch CSV (~63 MB)...\n"}
+,{"stream_name":"stdout","time":17.019261622,"data":"60247 retracted papers with DOI + retraction date\n"}
+,{"stream_name":"stdout","time":17.019316172,"data":"  skipped: {'nature': 5512, 'no_doi': 5881, 'no_date': 0}\n"}
+,{"stream_name":"stdout","time":17.472452986,"data":"wrote /kaggle/working/repo/data/retracted_dois.csv\n"}
+,{"stream_name":"stdout","time":17.476046736,"data":"retraction years 1966-2026, 41813 retracted in 2018 or later\n"}
+,{"stream_name":"stdout","time":17.714379487,"data":"\n"}
+,{"stream_name":"stdout","time":17.714426647,"data":"=== s01 ===\n"}
+,{"stream_name":"stdout","time":21.2173212,"data":"  'as an AI language model': page 1, 200 rows (total 9193), credits left 990\n"}
+,{"stream_name":"stdout","time":23.604239501,"data":"  'as an AI language model': page 2, 200 rows (total 9193), credits left 980\n"}
+,{"stream_name":"stdout","time":25.612153522,"data":"  'as an AI language model': page 3, 200 rows (total 9193), credits left 970\n"}
+,{"stream_name":"stdout","time":27.388638322,"data":"  'as an AI language model': page 4, 200 rows (total 9193), credits left 960\n"}
+,{"stream_name":"stdout","time":28.310736739,"data":"  'as an AI language model': page 5, 200 rows (total 9193), credits left 950\n"}
+,{"stream_name":"stdout","time":30.026041033,"data":"  'as an AI language model': page 6, 200 rows (total 9193), credits left 940\n"}
+,{"stream_name":"stdout","time":31.813916462999998,"data":"  'as an AI language model': page 7, 200 rows (total 9193), credits left 930\n"}
+,{"stream_name":"stdout","time":32.792755705,"data":"  'as an AI language model': page 8, 200 rows (total 9193), credits left 920\n"}
+,{"stream_name":"stdout","time":34.761897989,"data":"  'as an AI language model': page 9, 200 rows (total 9193), credits left 910\n"}
+,{"stream_name":"stdout","time":36.741923923,"data":"  'as an AI language model': page 10, 200 rows (total 9193), credits left 900\n"}
+,{"stream_name":"stdout","time":38.496901661,"data":"  'as an AI language model': page 11, 200 rows (total 9193), credits left 890\n"}
+,{"stream_name":"stdout","time":40.45364588,"data":"  'as an AI language model': page 12, 200 rows (total 9193), credits left 880\n"}
+,{"stream_name":"stdout","time":41.374610077,"data":"  'as an AI language model': page 13, 200 rows (total 9193), credits left 870\n"}
+,{"stream_name":"stdout","time":42.283378565,"data":"  'as an AI language model': page 14, 200 rows (total 9193), credits left 860\n"}
+,{"stream_name":"stdout","time":44.271380546,"data":"  'as an AI language model': page 15, 200 rows (total 9193), credits left 850\n"}
+,{"stream_name":"stdout","time":46.054720677,"data":"  'as an AI language model': page 16, 200 rows (total 9193), credits left 840\n"}
+,{"stream_name":"stdout","time":47.890337,"data":"  'as an AI language model': page 17, 200 rows (total 9193), credits left 830\n"}
+,{"stream_name":"stdout","time":49.598084957,"data":"  'as an AI language model': page 18, 200 rows (total 9193), credits left 820\n"}
+,{"stream_name":"stdout","time":51.387443296,"data":"  'as an AI language model': page 19, 200 rows (total 9193), credits left 810\n"}
+,{"stream_name":"stdout","time":53.131022659,"data":"  'as an AI language model': page 20, 200 rows (total 9193), credits left 800\n"}
+,{"stream_name":"stdout","time":53.922403065,"data":"  'as an AI language model': page 21, 200 rows (total 9193), credits left 790\n"}
+,{"stream_name":"stdout","time":55.883828591,"data":"  'as an AI language model': page 22, 200 rows (total 9193), credits left 780\n"}
+,{"stream_name":"stdout","time":57.91424536,"data":"  'as an AI language model': page 23, 200 rows (total 9193), credits left 770\n"}
+,{"stream_name":"stdout","time":59.729889148,"data":"  'as an AI language model': page 24, 200 rows (total 9193), credits left 760\n"}
+,{"stream_name":"stdout","time":61.492449399,"data":"  'as an AI language model': page 25, 200 rows (total 9193), credits left 750\n"}
+,{"stream_name":"stdout","time":63.294156957,"data":"  'as an AI language model': page 26, 200 rows (total 9193), credits left 740\n"}
+,{"stream_name":"stdout","time":65.019217111,"data":"  'as an AI language model': page 27, 200 rows (total 9193), credits left 730\n"}
+,{"stream_name":"stdout","time":66.566013039,"data":"  'as an AI language model': page 28, 200 rows (total 9193), credits left 720\n"}
+,{"stream_name":"stdout","time":68.919086593,"data":"  'as an AI language model': page 29, 200 rows (total 9193), credits left 710\n"}
+,{"stream_name":"stdout","time":70.72021327,"data":"  'as an AI language model': page 30, 200 rows (total 9193), credits left 700\n"}
+,{"stream_name":"stdout","time":72.440536135,"data":"  'as an AI language model': page 31, 200 rows (total 9193), credits left 690\n"}
+,{"stream_name":"stdout","time":74.12622289,"data":"  'as an AI language model': page 32, 200 rows (total 9193), credits left 680\n"}
+,{"stream_name":"stdout","time":75.884607382,"data":"  'as an AI language model': page 33, 200 rows (total 9193), credits left 670\n"}
+,{"stream_name":"stdout","time":77.647290972,"data":"  'as an AI language model': page 34, 200 rows (total 9193), credits left 660\n"}
+,{"stream_name":"stdout","time":79.356160947,"data":"  'as an AI language model': page 35, 200 rows (total 9193), credits left 650\n"}
+,{"stream_name":"stdout","time":81.119212598,"data":"  'as an AI language model': page 36, 200 rows (total 9193), credits left 640\n"}
+,{"stream_name":"stdout","time":82.820016034,"data":"  'as an AI language model': page 37, 200 rows (total 9193), credits left 630\n"}
+,{"stream_name":"stdout","time":83.75544573,"data":"  'as an AI language model': page 38, 200 rows (total 9193), credits left 620\n"}
+,{"stream_name":"stdout","time":85.445163367,"data":"  'as an AI language model': page 39, 200 rows (total 9193), credits left 610\n"}
+,{"stream_name":"stdout","time":87.30405243,"data":"  'as an AI language model': page 40, 200 rows (total 9193), credits left 600\n"}
+,{"stream_name":"stdout","time":89.116379584,"data":"  'as an AI language model': page 41, 200 rows (total 9193), credits left 590\n"}
+,{"stream_name":"stdout","time":90.864302368,"data":"  'as an AI language model': page 42, 200 rows (total 9193), credits left 580\n"}
+,{"stream_name":"stdout","time":92.682262315,"data":"  'as an AI language model': page 43, 200 rows (total 9193), credits left 570\n"}
+,{"stream_name":"stdout","time":94.411991488,"data":"  'as an AI language model': page 44, 200 rows (total 9193), credits left 560\n"}
+,{"stream_name":"stdout","time":96.175955299,"data":"  'as an AI language model': page 45, 200 rows (total 9193), credits left 550\n"}
+,{"stream_name":"stdout","time":97.955627228,"data":"  'as an AI language model': page 46, 200 rows (total 9193), credits left 540\n"}
+,{"stream_name":"stdout","time":98.56089276,"data":"  'as an AI language model': page 47, 9 rows (total 9193), credits left 530\n"}
+,{"stream_name":"stdout","time":100.556790002,"data":"  'as a large language model, I': page 1, 200 rows (total 262), credits left 520\n"}
+,{"stream_name":"stdout","time":102.139691208,"data":"  'as a large language model, I': page 2, 62 rows (total 262), credits left 510\n"}
+,{"stream_name":"stdout","time":103.834842524,"data":"  'as of my last knowledge update': page 1, 175 rows (total 175), credits left 500\n"}
+,{"stream_name":"stdout","time":104.403913329,"data":"  'I cannot browse the internet': page 1, 3 rows (total 3), credits left 490\n"}
+,{"stream_name":"stdout","time":105.969819214,"data":"  \"I don't have access to real-time\": page 1, 51 rows (total 51), credits left 480\n"}
+,{"stream_name":"stdout","time":107.55043317,"data":"  'as an AI developed by OpenAI': page 1, 126 rows (total 126), credits left 470\n"}
+,{"stream_name":"stdout","time":109.04515792,"data":"  'my knowledge cutoff': page 1, 139 rows (total 139), credits left 460\n"}
+,{"stream_name":"stdout","time":110.795450804,"data":"  'Regenerate response': page 1, 200 rows (total 21440), credits left 450\n"}
+,{"stream_name":"stdout","time":112.637512938,"data":"  'Regenerate response': page 2, 200 rows (total 21440), credits left 440\n"}
+,{"stream_name":"stdout","time":114.438977985,"data":"  'Regenerate response': page 3, 200 rows (total 21440), credits left 430\n"}
+,{"stream_name":"stdout","time":116.250334373,"data":"  'Regenerate response': page 4, 200 rows (total 21440), credits left 420\n"}
+,{"stream_name":"stdout","time":117.984083057,"data":"  'Regenerate response': page 5, 200 rows (total 21440), credits left 410\n"}
+,{"stream_name":"stdout","time":119.73353882,"data":"  'Regenerate response': page 6, 200 rows (total 21440), credits left 400\n"}
+,{"stream_name":"stdout","time":121.524604565,"data":"  'Regenerate response': page 7, 200 rows (total 21440), credits left 390\n"}
+,{"stream_name":"stdout","time":123.146093822,"data":"  'Regenerate response': page 8, 200 rows (total 21440), credits left 380\n"}
+,{"stream_name":"stdout","time":124.900676295,"data":"  'Regenerate response': page 9, 200 rows (total 21440), credits left 370\n"}
+,{"stream_name":"stdout","time":126.587047054,"data":"  'Regenerate response': page 10, 200 rows (total 21440), credits left 360\n"}
+,{"stream_name":"stdout","time":128.360314768,"data":"  'Regenerate response': page 11, 200 rows (total 21440), credits left 350\n"}
+,{"stream_name":"stdout","time":130.139912882,"data":"  'Regenerate response': page 12, 200 rows (total 21440), credits left 340\n"}
+,{"stream_name":"stdout","time":132.029044742,"data":"  'Regenerate response': page 13, 200 rows (total 21440), credits left 330\n"}
+,{"stream_name":"stdout","time":133.729500952,"data":"  'Regenerate response': page 14, 200 rows (total 21440), credits left 320\n"}
+,{"stream_name":"stdout","time":135.493179546,"data":"  'Regenerate response': page 15, 200 rows (total 21440), credits left 310\n"}
+,{"stream_name":"stdout","time":137.317703003,"data":"  'Regenerate response': page 16, 200 rows (total 21440), credits left 300\n"}
+,{"stream_name":"stdout","time":139.124974078,"data":"  'Regenerate response': page 17, 200 rows (total 21440), credits left 290\n"}
+,{"stream_name":"stdout","time":140.959849085,"data":"  'Regenerate response': page 18, 200 rows (total 21440), credits left 280\n"}
+,{"stream_name":"stdout","time":142.97112606,"data":"  'Regenerate response': page 19, 200 rows (total 21440), credits left 270\n"}
+,{"stream_name":"stdout","time":145.048944819,"data":"  'Regenerate response': page 20, 200 rows (total 21440), credits left 260\n"}
+,{"stream_name":"stdout","time":146.911953437,"data":"  'Regenerate response': page 21, 200 rows (total 21440), credits left 250\n"}
+,{"stream_name":"stdout","time":148.842655079,"data":"  'Regenerate response': page 22, 200 rows (total 21440), credits left 240\n"}
+,{"stream_name":"stdout","time":149.854113516,"data":"  'Regenerate response': page 23, 200 rows (total 21440), credits left 230\n"}
+,{"stream_name":"stdout","time":150.816231832,"data":"  'Regenerate response': page 24, 200 rows (total 21440), credits left 220\n"}
+,{"stream_name":"stdout","time":152.925766922,"data":"  'Regenerate response': page 25, 200 rows (total 21440), credits left 210\n"}
+,{"stream_name":"stdout","time":154.7806659,"data":"  'Regenerate response': page 26, 200 rows (total 21440), credits left 200\n"}
+,{"stream_name":"stdout","time":156.568853515,"data":"  'Regenerate response': page 27, 200 rows (total 21440), credits left 190\n"}
+,{"stream_name":"stdout","time":158.421807773,"data":"  'Regenerate response': page 28, 200 rows (total 21440), credits left 180\n"}
+,{"stream_name":"stdout","time":160.308926722,"data":"  'Regenerate response': page 29, 200 rows (total 21440), credits left 170\n"}
+,{"stream_name":"stdout","time":162.356378089,"data":"  'Regenerate response': page 30, 200 rows (total 21440), credits left 160\n"}
+,{"stream_name":"stdout","time":164.123758233,"data":"  'Regenerate response': page 31, 200 rows (total 21440), credits left 150\n"}
+,{"stream_name":"stdout","time":166.028196713,"data":"  'Regenerate response': page 32, 200 rows (total 21440), credits left 140\n"}
+,{"stream_name":"stdout","time":167.87186077,"data":"  'Regenerate response': page 33, 200 rows (total 21440), credits left 130\n"}
+,{"stream_name":"stdout","time":169.530808458,"data":"  'Regenerate response': page 34, 200 rows (total 21440), credits left 120\n"}
+,{"stream_name":"stdout","time":171.374302386,"data":"  'Regenerate response': page 35, 200 rows (total 21440), credits left 110\n"}
+,{"stream_name":"stdout","time":173.269424256,"data":"  'Regenerate response': page 36, 200 rows (total 21440), credits left 100\n"}
+,{"stream_name":"stdout","time":175.073853541,"data":"  'Regenerate response': page 37, 200 rows (total 21440), credits left 90\n"}
+,{"stream_name":"stdout","time":176.975098441,"data":"  'Regenerate response': page 38, 200 rows (total 21440), credits left 80\n"}
+,{"stream_name":"stdout","time":178.773685067,"data":"  'Regenerate response': page 39, 200 rows (total 21440), credits left 70\n"}
+,{"stream_name":"stdout","time":180.630063185,"data":"  'Regenerate response': page 40, 200 rows (total 21440), credits left 60\n"}
+,{"stream_name":"stdout","time":182.532310254,"data":"  'Regenerate response': page 41, 200 rows (total 21440), credits left 50\n"}
+,{"stream_name":"stdout","time":184.371896331,"data":"  'Regenerate response': page 42, 200 rows (total 21440), credits left 40\n"}
+,{"stream_name":"stdout","time":186.099935513,"data":"  'Regenerate response': page 43, 200 rows (total 21440), credits left 30\n"}
+,{"stream_name":"stdout","time":187.927149449,"data":"  'Regenerate response': page 44, 200 rows (total 21440), credits left 20\n"}
+,{"stream_name":"stdout","time":189.82975166,"data":"  'Regenerate response': page 45, 200 rows (total 21440), credits left 10\n"}
+,{"stream_name":"stdout","time":191.644137925,"data":"  'Regenerate response': page 46, 200 rows (total 21440), credits left 0\n"}
+,{"stream_name":"stdout","time":191.687743938,"data":"  budget spent during 'Regenerate response': OpenAlex daily budget spent; resets in 18.7 h\n"}
+,{"stream_name":"stdout","time":191.986508502,"data":"18862 unique candidates; 7/8 phrases complete\n"}
+,{"stream_name":"stdout","time":193.833546519,"data":"kept 9571 / 18862\n"}
+,{"stream_name":"stdout","time":193.835577399,"data":"reason\n"}
+,{"stream_name":"stdout","time":193.835629309,"data":"kept                                    9571\n"}
+,{"stream_name":"stdout","time":193.835664349,"data":"meta_title                              3689\n"}
+,{"stream_name":"stdout","time":193.835668849,"data":"no_references                           2429\n"}
+,{"stream_name":"stdout","time":193.835671859,"data":"ai_subfield                             1914\n"}
+,{"stream_name":"stdout","time":193.835675169,"data":"type:conference-paper                    285\n"}
+,{"stream_name":"stdout","time":193.835678029,"data":"type:peer-review                         106\n"}
+,{"stream_name":"stdout","time":193.835680249,"data":"type:other                                91\n"}
+,{"stream_name":"stdout","time":193.835682319,"data":"meta_abstract:language model|chatgpt      86\n"}
+,{"stream_name":"stdout","time":193.835684319,"data":"type:book                                 85\n"}
+,{"stream_name":"stdout","time":193.835686589,"data":"type:conference-abstract                  83\n"}
+,{"stream_name":"stdout","time":193.835688609,"data":"\n"}
+,{"stream_name":"stdout","time":193.835690589,"data":"INCOMPLETE: budget spent. Rerun after reset to continue.\n"}
+,{"stream_name":"stdout","time":194.160256704,"data":"\n"}
+,{"stream_name":"stdout","time":194.160304905,"data":"=== RUN SUMMARY ===\n"}
+,{"stream_name":"stdout","time":194.160310035,"data":"s00: ok\n"}
+,{"stream_name":"stdout","time":194.160313765,"data":"s01: exit_2\n"}
+,{"stream_name":"stdout","time":194.160316885,"data":"INCOMPLETE\n"}
+,{"stream_name":"stdout","time":194.164988895,"data":"46M\tdata\n"}
+,{"stream_name":"stdout","time":194.165023475,"data":"\n"}
+,{"stream_name":"stderr","time":196.687942244,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":196.687988984,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":197.099570374,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":197.099608164,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":198.005252927,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":199.631880564,"data":"[NbConvertApp] Writing 286689 bytes to __results__.html\n"}
+]

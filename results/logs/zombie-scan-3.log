@@ -1,0 +1,76 @@
+[{"stream_name":"stderr","time":0.840398895,"data":"Cloning into 'repo'...\n"}
+,{"stream_name":"stdout","time":1.42752085,"data":"resume from /kaggle/input/datasets/garyzhang11111/aisci-zombie-stage2/data\n"}
+,{"stream_name":"stdout","time":1.918164704,"data":"resume from /kaggle/input/datasets/garyzhang11111/aisci-zombie-stage2/out\n"}
+,{"stream_name":"stdout","time":6.83140141,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 70.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":9.644941792000001,"data":"\n"}
+,{"stream_name":"stdout","time":9.644983282,"data":"=== s03 ===\n"}
+,{"stream_name":"stdout","time":15.087439286,"data":"60447 retracted works, 1731 artifact papers, 1179 venue-years for controls\n"}
+,{"stream_name":"stdout","time":16.568872607,"data":"shard 3of6: 408 files, 13 with abstracts\n"}
+,{"stream_name":"stdout","time":16.828119737,"data":"  0/408 files | zombie events 0 | cohort 0 | control pools 0 | lexical 0/0\n"}
+,{"stream_name":"stdout","time":17.704894045,"data":"  10/408 files | zombie events 0 | cohort 0 | control pools 0 | lexical 0/0\n"}
+,{"stream_name":"stdout","time":18.505719913,"data":"  20/408 files | zombie events 0 | cohort 0 | control pools 0 | lexical 0/0\n"}
+,{"stream_name":"stdout","time":19.286662319,"data":"  30/408 files | zombie events 0 | cohort 0 | control pools 0 | lexical 0/0\n"}
+,{"stream_name":"stdout","time":36.074313757,"data":"  40/408 files | zombie events 0 | cohort 0 | control pools 1 | lexical 0/0\n"}
+,{"stream_name":"stdout","time":100.625634422,"data":"  50/408 files | zombie events 17 | cohort 0 | control pools 3 | lexical 0/0\n"}
+,{"stream_name":"stdout","time":161.512835336,"data":"  60/408 files | zombie events 28 | cohort 0 | control pools 3 | lexical 0/0\n"}
+,{"stream_name":"stdout","time":193.460150052,"data":"  70/408 files | zombie events 58 | cohort 0 | control pools 22 | lexical 0/0\n"}
+,{"stream_name":"stdout","time":244.085360078,"data":"  80/408 files | zombie events 335 | cohort 0 | control pools 60 | lexical 0/0\n"}
+,{"stream_name":"stdout","time":301.317552426,"data":"  90/408 files | zombie events 621 | cohort 0 | control pools 70 | lexical 2768/2768\n"}
+,{"stream_name":"stdout","time":341.948665868,"data":"  100/408 files | zombie events 839 | cohort 0 | control pools 79 | lexical 2768/2768\n"}
+,{"stream_name":"stdout","time":383.443525961,"data":"  110/408 files | zombie events 1054 | cohort 0 | control pools 88 | lexical 2768/2768\n"}
+,{"stream_name":"stdout","time":431.284376054,"data":"  120/408 files | zombie events 1286 | cohort 0 | control pools 98 | lexical 2768/2768\n"}
+,{"stream_name":"stdout","time":468.262251999,"data":"  130/408 files | zombie events 1485 | cohort 0 | control pools 101 | lexical 2768/2768\n"}
+,{"stream_name":"stdout","time":529.545752213,"data":"  140/408 files | zombie events 1773 | cohort 0 | control pools 107 | lexical 5661/5661\n"}
+,{"stream_name":"stdout","time":586.748170558,"data":"  150/408 files | zombie events 2042 | cohort 0 | control pools 110 | lexical 5661/5661\n"}
+,{"stream_name":"stdout","time":636.068104078,"data":"  160/408 files | zombie events 2267 | cohort 0 | control pools 117 | lexical 8373/8373\n"}
+,{"stream_name":"stdout","time":681.701876413,"data":"  170/408 files | zombie events 2471 | cohort 0 | control pools 121 | lexical 11240/11240\n"}
+,{"stream_name":"stdout","time":747.700797225,"data":"  180/408 files | zombie events 2780 | cohort 0 | control pools 131 | lexical 19831/19831\n"}
+,{"stream_name":"stdout","time":797.581767231,"data":"  190/408 files | zombie events 3040 | cohort 0 | control pools 136 | lexical 29261/29261\n"}
+,{"stream_name":"stdout","time":846.12547876,"data":"  200/408 files | zombie events 3278 | cohort 0 | control pools 138 | lexical 29261/29261\n"}
+,{"stream_name":"stdout","time":904.829353651,"data":"  210/408 files | zombie events 3608 | cohort 0 | control pools 142 | lexical 32116/32116\n"}
+,{"stream_name":"stdout","time":957.649223564,"data":"  220/408 files | zombie events 3859 | cohort 1 | control pools 144 | lexical 32116/32116\n"}
+,{"stream_name":"stdout","time":996.482391026,"data":"  230/408 files | zombie events 4047 | cohort 1 | control pools 147 | lexical 35030/35030\n"}
+,{"stream_name":"stdout","time":1055.915063626,"data":"  240/408 files | zombie events 4338 | cohort 1 | control pools 151 | lexical 35030/35030\n"}
+,{"stream_name":"stdout","time":1104.749396034,"data":"  250/408 files | zombie events 4568 | cohort 1 | control pools 151 | lexical 37955/37955\n"}
+,{"stream_name":"stdout","time":1134.376780889,"data":"  260/408 files | zombie events 4919 | cohort 5 | control pools 182 | lexical 37955/37955\n"}
+,{"stream_name":"stdout","time":1286.608235738,"data":"  270/408 files | zombie events 8614 | cohort 11 | control pools 375 | lexical 37955/37955\n"}
+,{"stream_name":"stdout","time":1356.878502402,"data":"  280/408 files | zombie events 9836 | cohort 17 | control pools 405 | lexical 37955/37955\n"}
+,{"stream_name":"stdout","time":1420.576834641,"data":"  290/408 files | zombie events 9839 | cohort 17 | control pools 405 | lexical 37955/37955\n"}
+,{"stream_name":"stdout","time":1488.618161743,"data":"  300/408 files | zombie events 9844 | cohort 17 | control pools 405 | lexical 37955/37955\n"}
+,{"stream_name":"stdout","time":1560.524548095,"data":"  310/408 files | zombie events 10085 | cohort 17 | control pools 409 | lexical 37955/37955\n"}
+,{"stream_name":"stdout","time":1631.201008615,"data":"  320/408 files | zombie events 10753 | cohort 19 | control pools 441 | lexical 37955/37955\n"}
+,{"stream_name":"stdout","time":1683.774409589,"data":"  330/408 files | zombie events 11074 | cohort 23 | control pools 480 | lexical 37955/37955\n"}
+,{"stream_name":"stdout","time":1734.010528785,"data":"  340/408 files | zombie events 11823 | cohort 28 | control pools 505 | lexical 37955/37955\n"}
+,{"stream_name":"stdout","time":1848.637632494,"data":"  350/408 files | zombie events 13777 | cohort 38 | control pools 866 | lexical 38841/38841\n"}
+,{"stream_name":"stdout","time":2050.073009513,"data":"  360/408 files | zombie events 18853 | cohort 114 | control pools 994 | lexical 38841/38841\n"}
+,{"stream_name":"stdout","time":2195.370124475,"data":"  370/408 files | zombie events 23529 | cohort 169 | control pools 1056 | lexical 38841/38841\n"}
+,{"stream_name":"stdout","time":2409.217820075,"data":"  380/408 files | zombie events 30155 | cohort 206 | control pools 1099 | lexical 38841/38841\n"}
+,{"stream_name":"stdout","time":2515.980989741,"data":"  390/408 files | zombie events 31936 | cohort 220 | control pools 1104 | lexical 38841/38841\n"}
+,{"stream_name":"stdout","time":2623.434833538,"data":"  400/408 files | zombie events 33589 | cohort 233 | control pools 1109 | lexical 38841/38841\n"}
+,{"stream_name":"stdout","time":2698.919477299,"data":"{\n"}
+,{"stream_name":"stdout","time":2698.919524977,"data":"  \"shard\": \"3of6\",\n"}
+,{"stream_name":"stdout","time":2698.919532449,"data":"  \"snapshot_date\": \"2026-06-26\",\n"}
+,{"stream_name":"stdout","time":2698.919536629,"data":"  \"files_done\": 408,\n"}
+,{"stream_name":"stdout","time":2698.919540561,"data":"  \"files_assigned\": 408,\n"}
+,{"stream_name":"stdout","time":2698.919544317,"data":"  \"complete\": true,\n"}
+,{"stream_name":"stdout","time":2698.919548214,"data":"  \"zombie_events\": 34861,\n"}
+,{"stream_name":"stdout","time":2698.919552012,"data":"  \"works_counted\": 33990267,\n"}
+,{"stream_name":"stdout","time":2698.919564418,"data":"  \"cohort_rows\": 241,\n"}
+,{"stream_name":"stdout","time":2698.919567721,"data":"  \"control_venue_years\": 1114,\n"}
+,{"stream_name":"stdout","time":2698.919570864,"data":"  \"control_rows\": 34918,\n"}
+,{"stream_name":"stdout","time":2698.919573986,"data":"  \"lexical_rows\": 38841,\n"}
+,{"stream_name":"stdout","time":2698.91957696,"data":"  \"lexical_seen\": 38841\n"}
+,{"stream_name":"stdout","time":2698.919580079,"data":"}\n"}
+,{"stream_name":"stdout","time":2699.40493456,"data":"\n"}
+,{"stream_name":"stdout","time":2699.404972312,"data":"=== RUN SUMMARY ===\n"}
+,{"stream_name":"stdout","time":2699.404978727,"data":"s03: ok\n"}
+,{"stream_name":"stdout","time":2699.404983209,"data":"ALL_OK\n"}
+,{"stream_name":"stdout","time":2699.408968681,"data":"31M\tdata\n"}
+,{"stream_name":"stdout","time":2699.408993757,"data":"\n"}
+,{"stream_name":"stderr","time":2702.066145841,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2702.066177487,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2702.35535524,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2702.355389167,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2703.091836011,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2704.598497302,"data":"[NbConvertApp] Writing 286884 bytes to __results__.html\n"}
+]

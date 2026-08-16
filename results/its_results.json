@@ -1,0 +1,281 @@
+{
+  "pooled": {
+    "break_month": "2022-12",
+    "level_change": 0.2320344581514992,
+    "level_change_se": 0.12976665238622123,
+    "level_change_p": 0.07376148289028575,
+    "slope_change": -0.011549361367653853,
+    "slope_change_se": 0.004106360184504586,
+    "slope_change_p": 0.0049149710371585624,
+    "pre_mean_rate": 1.159974797779377,
+    "n_months": 102
+  },
+  "placebos": [
+    {
+      "month": "2019-01",
+      "level_change": -0.03699356291375111
+    },
+    {
+      "month": "2019-02",
+      "level_change": -0.031426475339998115
+    },
+    {
+      "month": "2019-03",
+      "level_change": -0.025859142297606746
+    },
+    {
+      "month": "2019-04",
+      "level_change": -0.021446917865805475
+    },
+    {
+      "month": "2019-05",
+      "level_change": -0.0024481267625465486
+    },
+    {
+      "month": "2019-06",
+      "level_change": 0.018158905153907112
+    },
+    {
+      "month": "2019-07",
+      "level_change": 0.044995282009873266
+    },
+    {
+      "month": "2019-08",
+      "level_change": 0.036796433571189856
+    },
+    {
+      "month": "2019-09",
+      "level_change": 0.032811036195379284
+    },
+    {
+      "month": "2019-10",
+      "level_change": 0.03463691821557785
+    },
+    {
+      "month": "2019-11",
+      "level_change": 0.046640065242916945
+    },
+    {
+      "month": "2019-12",
+      "level_change": 0.052199946198263666
+    },
+    {
+      "month": "2020-01",
+      "level_change": 0.051776721577884266
+    },
+    {
+      "month": "2020-02",
+      "level_change": 0.03204840602879712
+    },
+    {
+      "month": "2020-03",
+      "level_change": 0.0286000533321204
+    },
+    {
+      "month": "2020-04",
+      "level_change": -0.004538483187141576
+    },
+    {
+      "month": "2020-05",
+      "level_change": 0.013200422130509204
+    },
+    {
+      "month": "2020-06",
+      "level_change": 0.03568281511501792
+    },
+    {
+      "month": "2020-07",
+      "level_change": 0.06224615059759947
+    },
+    {
+      "month": "2020-08",
+      "level_change": 0.09885328157482093
+    },
+    {
+      "month": "2020-09",
+      "level_change": 0.11460679265921186
+    },
+    {
+      "month": "2020-10",
+      "level_change": 0.12334862855870782
+    },
+    {
+      "month": "2020-11",
+      "level_change": 0.12460517195182072
+    },
+    {
+      "month": "2020-12",
+      "level_change": 0.14715443601243922
+    },
+    {
+      "month": "2021-01",
+      "level_change": 0.15361367355761643
+    },
+    {
+      "month": "2021-02",
+      "level_change": 0.0998266690291019
+    },
+    {
+      "month": "2021-03",
+      "level_change": 0.08533459016756403
+    },
+    {
+      "month": "2021-04",
+      "level_change": 0.07240485139777678
+    },
+    {
+      "month": "2021-05",
+      "level_change": 0.0633853292683895
+    },
+    {
+      "month": "2021-06",
+      "level_change": 0.053729506133526804
+    },
+    {
+      "month": "2021-07",
+      "level_change": 0.056774840993840336
+    },
+    {
+      "month": "2021-08",
+      "level_change": 0.054659384451971854
+    },
+    {
+      "month": "2021-09",
+      "level_change": 0.03487250288366095
+    },
+    {
+      "month": "2021-10",
+      "level_change": 0.06529066396209643
+    },
+    {
+      "month": "2021-11",
+      "level_change": 0.04791178740356741
+    },
+    {
+      "month": "2021-12",
+      "level_change": 0.07484493440056128
+    }
+  ],
+  "actual_abs_exceeds_placebo_share": 1.0,
+  "placebo_max_abs": 0.15361367355761643,
+  "per_field": {
+    "Medicine": {
+      "break_month": "2022-12",
+      "level_change": 0.16250583077938238,
+      "level_change_se": 0.17839359689565448,
+      "level_change_p": 0.36232708393404467,
+      "slope_change": -0.01728931913306168,
+      "slope_change_se": 0.006949810048256422,
+      "slope_change_p": 0.012855774812582592,
+      "pre_mean_rate": 1.974156505239036,
+      "n_months": 102
+    },
+    "Biochemistry, Genetics and Molecular Biology": {
+      "break_month": "2022-12",
+      "level_change": 0.6056290168408867,
+      "level_change_se": 0.2986396413227079,
+      "level_change_p": 0.04256440928508633,
+      "slope_change": -0.06473543750831323,
+      "slope_change_se": 0.008812598208063061,
+      "slope_change_p": 2.045574288516475e-13,
+      "pre_mean_rate": 2.417560759220946,
+      "n_months": 102
+    },
+    "Engineering": {
+      "break_month": "2022-12",
+      "level_change": 0.2955089520829769,
+      "level_change_se": 0.11484089555261588,
+      "level_change_p": 0.010076204908920177,
+      "slope_change": -0.005659465577360457,
+      "slope_change_se": 0.003567391823779703,
+      "slope_change_p": 0.11263873886577264,
+      "pre_mean_rate": 0.7367871580897741,
+      "n_months": 102
+    },
+    "Computer Science": {
+      "break_month": "2022-12",
+      "level_change": 1.4886233367302784,
+      "level_change_se": 0.5387299748136406,
+      "level_change_p": 0.005723616196897898,
+      "slope_change": 0.013710079924212734,
+      "slope_change_se": 0.018128296808845038,
+      "slope_change_p": 0.4494809526775816,
+      "pre_mean_rate": 0.5163151603915858,
+      "n_months": 102
+    },
+    "Agricultural and Biological Sciences": {
+      "break_month": "2022-12",
+      "level_change": 0.29656204249460294,
+      "level_change_se": 0.10448486638008331,
+      "level_change_p": 0.004535093364091821,
+      "slope_change": 0.001564718973457712,
+      "slope_change_se": 0.004019022720336943,
+      "slope_change_p": 0.6970333611600419,
+      "pre_mean_rate": 1.1117599194740408,
+      "n_months": 102
+    },
+    "Materials Science": {
+      "break_month": "2022-12",
+      "level_change": 0.174256875840203,
+      "level_change_se": 0.07311242776049577,
+      "level_change_p": 0.017153088143328277,
+      "slope_change": -0.008877277273954315,
+      "slope_change_se": 0.002714134590934076,
+      "slope_change_p": 0.0010725967479442665,
+      "pre_mean_rate": 1.0601975990656627,
+      "n_months": 102
+    },
+    "Social Sciences": {
+      "break_month": "2022-12",
+      "level_change": 0.2338231849649497,
+      "level_change_se": 0.1748442050143198,
+      "level_change_p": 0.1811172112477688,
+      "slope_change": -0.0030226646443010435,
+      "slope_change_se": 0.005925729956704821,
+      "slope_change_p": 0.6099873407143634,
+      "pre_mean_rate": 0.5743689598729045,
+      "n_months": 102
+    },
+    "Environmental Science": {
+      "break_month": "2022-12",
+      "level_change": 0.06844500630770205,
+      "level_change_se": 0.03998567502736131,
+      "level_change_p": 0.08694493051766387,
+      "slope_change": 0.005549497286424024,
+      "slope_change_se": 0.001904893299701112,
+      "slope_change_p": 0.003576478973183246,
+      "pre_mean_rate": 0.6329183983644184,
+      "n_months": 102
+    }
+  },
+  "end_month_sensitivity": {
+    "2025-06": {
+      "level_change": 0.19308158372728812,
+      "level_change_p": 0.11307418369317145,
+      "slope_change": -0.008656757400978491,
+      "slope_change_p": 0.30901854743051926,
+      "n_months": 90
+    },
+    "2025-12": {
+      "level_change": 0.19032916652975973,
+      "level_change_p": 0.09369787120423975,
+      "slope_change": -0.008441684548558167,
+      "slope_change_p": 0.06459195206947906,
+      "n_months": 96
+    },
+    "2026-03": {
+      "level_change": 0.1937543565120044,
+      "level_change_p": 0.09237729861348311,
+      "slope_change": -0.008679449297281738,
+      "slope_change_p": 0.020759911409155153,
+      "n_months": 99
+    },
+    "2026-06": {
+      "level_change": 0.2320344581514992,
+      "level_change_p": 0.07376148289028575,
+      "slope_change": -0.011549361367653853,
+      "slope_change_p": 0.0049149710371585624,
+      "n_months": 102
+    }
+  }
+}

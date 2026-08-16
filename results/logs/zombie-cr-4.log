@@ -1,0 +1,53 @@
+[{"stream_name":"stderr","time":0.832437306,"data":"Cloning into 'repo'...\n"}
+,{"stream_name":"stdout","time":1.824671353,"data":"resume from /kaggle/input/aisci-zombie-stage3c/data\n"}
+,{"stream_name":"stdout","time":2.08296515,"data":"resume from /kaggle/input/aisci-zombie-stage3c/out\n"}
+,{"stream_name":"stdout","time":7.232298405,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 56.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":10.145853919,"data":"\n"}
+,{"stream_name":"stdout","time":10.145895021,"data":"=== s05 ===\n"}
+,{"stream_name":"stdout","time":12.765615297,"data":"shard 4/5: 1803 assigned, 785 still to do (of 9017 total)\n"}
+,{"stream_name":"stdout","time":13.049765688,"data":"  0/785\n"}
+,{"stream_name":"stdout","time":306.756277014,"data":"  25/785\n"}
+,{"stream_name":"stdout","time":647.20727655,"data":"  50/785\n"}
+,{"stream_name":"stdout","time":814.98719615,"data":"  75/785\n"}
+,{"stream_name":"stdout","time":903.819953461,"data":"  100/785\n"}
+,{"stream_name":"stdout","time":1379.166454029,"data":"  125/785\n"}
+,{"stream_name":"stdout","time":1667.465222994,"data":"  150/785\n"}
+,{"stream_name":"stdout","time":2212.921320627,"data":"  175/785\n"}
+,{"stream_name":"stdout","time":2686.078247528,"data":"  200/785\n"}
+,{"stream_name":"stdout","time":2972.836166925,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":2972.836214624,"data":"  File \"/kaggle/working/repo/src/s05_crossref.py\", line 155, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":2972.836305828,"data":"    sys.exit(main())\n"}
+,{"stream_name":"stdout","time":2972.836319603,"data":"             ^^^^^^\n"}
+,{"stream_name":"stdout","time":2972.836411557,"data":"  File \"/kaggle/working/repo/src/s05_crossref.py\", line 135, in main\n"}
+,{"stream_name":"stdout","time":2972.836581572,"data":"    \"n_unresolvable\": sum(1 for r in refs\n"}
+,{"stream_name":"stdout","time":2972.836665434,"data":"                      ^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":2972.836676322,"data":"  File \"/kaggle/working/repo/src/s05_crossref.py\", line 136, in \u003cgenexpr\u003e\n"}
+,{"stream_name":"stdout","time":2972.836777912,"data":"    if ref_unresolvable(r)),\n"}
+,{"stream_name":"stdout","time":2972.836876281,"data":"       ^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":2972.83688743,"data":"  File \"/kaggle/working/repo/src/s05_crossref.py\", line 45, in ref_unresolvable\n"}
+,{"stream_name":"stdout","time":2972.837038464,"data":"    return not doi_resolves(doi)\n"}
+,{"stream_name":"stdout","time":2972.837171175,"data":"               ^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":2972.837184874,"data":"  File \"/kaggle/working/repo/src/s05_crossref.py\", line 32, in doi_resolves\n"}
+,{"stream_name":"stdout","time":2972.837262926,"data":"    _doi_cache[doi] = oa.cr_get(f\"/works/{doi}\") is not None\n"}
+,{"stream_name":"stdout","time":2972.837695121,"data":"                      ^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":2972.837720236,"data":"  File \"/kaggle/working/repo/src/oa.py\", line 130, in cr_get\n"}
+,{"stream_name":"stdout","time":2972.837810164,"data":"    return _throttled_get(\"cr\", f\"{CR_BASE}{path}\", params)\n"}
+,{"stream_name":"stdout","time":2972.838039661,"data":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":2972.838064944,"data":"  File \"/kaggle/working/repo/src/oa.py\", line 90, in _throttled_get\n"}
+,{"stream_name":"stdout","time":2972.838200972,"data":"    r.raise_for_status()\n"}
+,{"stream_name":"stdout","time":2972.838228656,"data":"  File \"/usr/local/lib/python3.12/dist-packages/requests/models.py\", line 1026, in raise_for_status\n"}
+,{"stream_name":"stdout","time":2972.840381102,"data":"    raise HTTPError(http_error_msg, response=self)\n"}
+,{"stream_name":"stdout","time":2972.84040355,"data":"requests.exceptions.HTTPError: 504 Server Error: Gateway Time-out for url: https://api.crossref.org/works/10.1080/00222895.2022.2060928?mailto=jakobingerbrigsten%40gmail.com\n"}
+,{"stream_name":"stdout","time":2973.038605444,"data":"\n"}
+,{"stream_name":"stdout","time":2973.038653205,"data":"=== RUN SUMMARY ===\n"}
+,{"stream_name":"stdout","time":2973.038658281,"data":"s05: exit_1\n"}
+,{"stream_name":"stdout","time":2973.038661804,"data":"INCOMPLETE\n"}
+,{"stream_name":"stdout","time":2973.042981701,"data":"16M\tdata\n"}
+,{"stream_name":"stdout","time":2973.043014719,"data":"\n"}
+,{"stream_name":"stderr","time":2975.868207186,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2975.868245088,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2976.226008066,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2976.226041864,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2977.173516794,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2978.90254012,"data":"[NbConvertApp] Writing 286888 bytes to __results__.html\n"}
+]

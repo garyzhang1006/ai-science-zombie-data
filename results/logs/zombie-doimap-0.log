@@ -1,0 +1,44 @@
+[{"stream_name":"stderr","time":0.720149587,"data":"Cloning into 'repo'...\n"}
+,{"stream_name":"stdout","time":5.914982022,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 57.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":8.634571497,"data":"\n"}
+,{"stream_name":"stdout","time":8.634609118,"data":"=== s00 ===\n"}
+,{"stream_name":"stdout","time":10.235795255,"data":"downloading Retraction Watch CSV (~63 MB)...\n"}
+,{"stream_name":"stdout","time":16.605765552,"data":"60247 retracted papers with DOI + retraction date\n"}
+,{"stream_name":"stdout","time":16.605829967,"data":"  skipped: {'nature': 5512, 'no_doi': 5881, 'no_date': 0}\n"}
+,{"stream_name":"stdout","time":17.130546126,"data":"wrote /kaggle/working/repo/data/retracted_dois.csv\n"}
+,{"stream_name":"stdout","time":17.13291364,"data":"retraction years 1966-2026, 41813 retracted in 2018 or later\n"}
+,{"stream_name":"stdout","time":17.261444331,"data":"\n"}
+,{"stream_name":"stdout","time":17.261484602,"data":"=== s02 ===\n"}
+,{"stream_name":"stdout","time":18.981918872,"data":"looking for 60247 retracted DOIs in snapshot 2026-06-26\n"}
+,{"stream_name":"stdout","time":21.486052087,"data":"  0/408 files, 0 matches so far\n"}
+,{"stream_name":"stdout","time":29.394250379,"data":"  25/408 files, 0 matches so far\n"}
+,{"stream_name":"stdout","time":61.333903621,"data":"  50/408 files, 25 matches so far\n"}
+,{"stream_name":"stdout","time":111.086678957,"data":"  75/408 files, 122 matches so far\n"}
+,{"stream_name":"stdout","time":203.032131754,"data":"  100/408 files, 435 matches so far\n"}
+,{"stream_name":"stdout","time":265.182620613,"data":"  125/408 files, 754 matches so far\n"}
+,{"stream_name":"stdout","time":316.15363575,"data":"  150/408 files, 1048 matches so far\n"}
+,{"stream_name":"stdout","time":362.306950481,"data":"  175/408 files, 1286 matches so far\n"}
+,{"stream_name":"stdout","time":416.265662458,"data":"  200/408 files, 1572 matches so far\n"}
+,{"stream_name":"stdout","time":470.639640901,"data":"  225/408 files, 1863 matches so far\n"}
+,{"stream_name":"stdout","time":526.052927517,"data":"  250/408 files, 2136 matches so far\n"}
+,{"stream_name":"stdout","time":589.461762057,"data":"  275/408 files, 3339 matches so far\n"}
+,{"stream_name":"stdout","time":646.693977266,"data":"  300/408 files, 3349 matches so far\n"}
+,{"stream_name":"stdout","time":722.149565906,"data":"  325/408 files, 3509 matches so far\n"}
+,{"stream_name":"stdout","time":785.66610715,"data":"  350/408 files, 4589 matches so far\n"}
+,{"stream_name":"stdout","time":902.663276341,"data":"  375/408 files, 8985 matches so far\n"}
+,{"stream_name":"stdout","time":1004.875265844,"data":"  400/408 files, 10027 matches so far\n"}
+,{"stream_name":"stdout","time":1027.157817942,"data":"wrote /kaggle/working/repo/data/retracted_works_0of6.csv: 10332 of 60247 retracted papers found in OpenAlex (17.1%)\n"}
+,{"stream_name":"stdout","time":1027.423139096,"data":"\n"}
+,{"stream_name":"stdout","time":1027.423171252,"data":"=== RUN SUMMARY ===\n"}
+,{"stream_name":"stdout","time":1027.423177907,"data":"s00: ok\n"}
+,{"stream_name":"stdout","time":1027.423183337,"data":"s02: ok\n"}
+,{"stream_name":"stdout","time":1027.423188724,"data":"ALL_OK\n"}
+,{"stream_name":"stdout","time":1027.426636545,"data":"17M\tdata\n"}
+,{"stream_name":"stdout","time":1027.426662477,"data":"\n"}
+,{"stream_name":"stderr","time":1029.918366143,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1029.918403539,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1030.18367608,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1030.18370373,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1030.886945277,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1032.332811769,"data":"[NbConvertApp] Writing 286935 bytes to __results__.html\n"}
+]

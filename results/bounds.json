@@ -1,0 +1,31 @@
+{
+  "zombie": {
+    "n": 629900,
+    "infeasible_reason": null,
+    "min_specificity_required": 0.9938418796634386,
+    "p_proxy_positive": 0.006158120336561359,
+    "naive_rate_proxy_pos": 0.010569734467646301,
+    "naive_rate_proxy_neg": 0.0011325498665380235,
+    "bound_ai_lo": 0.012388045920408732,
+    "bound_ai_hi": 0.05106237148732029,
+    "bound_nonai_lo": 0.0,
+    "bound_nonai_hi": 0.0008927035814612492,
+    "n_feasible_grid_points": 12,
+    "attenuation_factor_max": 4.830998512178424
+  },
+  "n_sample": 629900,
+  "proxy_positive_share": 0.006158120336561359,
+  "sens_grid": [
+    0.03,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "spec_grid": [
+    0.992,
+    0.995,
+    0.998,
+    0.999
+  ],
+  "lexical_threshold": 2
+}

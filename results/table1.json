@@ -1,0 +1,23 @@
+{
+  "zombie": {
+    "artifact_rate_per_1000": 0.15714285714285714,
+    "control_rate_per_1000": 0.17899837622901565,
+    "ratio": 0.8779010204081632,
+    "ratio_ci_lo": 0.3785130742263937,
+    "ratio_ci_hi": 1.6321578355223705,
+    "n_artifact": 1645,
+    "n_control": 7370
+  },
+  "mean_refs_artifact": 42.5531914893617,
+  "mean_refs_control": 42.44938941655359,
+  "n_matched_pairs": 7644,
+  "unresolvable": {
+    "artifact_rate_per_1000": 138.8375709406026,
+    "control_rate_per_1000": 127.75665399239544,
+    "ratio": 1.086734558255312,
+    "ratio_ci_lo": 1.0041065127839572,
+    "ratio_ci_hi": 1.1728380014894846,
+    "n_artifact": 1385,
+    "n_control": 5957
+  }
+}

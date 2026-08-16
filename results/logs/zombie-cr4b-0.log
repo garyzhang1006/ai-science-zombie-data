@@ -1,0 +1,489 @@
+[{"stream_name":"stderr","time":0.931555804,"data":"Cloning into 'repo'...\n"}
+,{"stream_name":"stdout","time":1.684134716,"data":"resume from /kaggle/input/datasets/garyzhang11111/aisci-zombie-stage3d/data\n"}
+,{"stream_name":"stdout","time":1.997709171,"data":"resume from /kaggle/input/datasets/garyzhang11111/aisci-zombie-stage3d/out\n"}
+,{"stream_name":"stdout","time":7.38904355,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 30.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":10.195089261,"data":"\n"}
+,{"stream_name":"stdout","time":10.195129227,"data":"=== s05 ===\n"}
+,{"stream_name":"stdout","time":13.043632824,"data":"shard 0/2: 4509 assigned, 1199 still to do (of 9017 total)\n"}
+,{"stream_name":"stdout","time":13.134995435,"data":"  0/1199\n"}
+,{"stream_name":"stdout","time":53.060015225,"data":"  skipping 404 on https://api.crossref.org/works/10.5287/bodleian:orq2abnbr\n"}
+,{"stream_name":"stdout","time":55.318526638,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2206.02909\n"}
+,{"stream_name":"stdout","time":92.774902112,"data":"  25/1199\n"}
+,{"stream_name":"stdout","time":168.086629305,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2304.11534\n"}
+,{"stream_name":"stdout","time":168.187344568,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2304.12752\n"}
+,{"stream_name":"stdout","time":168.397717405,"data":"  50/1199\n"}
+,{"stream_name":"stdout","time":168.789566471,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2305.18997\n"}
+,{"stream_name":"stdout","time":191.132215822,"data":"  75/1199\n"}
+,{"stream_name":"stdout","time":191.344939219,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2306.15431\n"}
+,{"stream_name":"stdout","time":191.445371172,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2306.17021\n"}
+,{"stream_name":"stdout","time":233.320240303,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2307.04694\n"}
+,{"stream_name":"stdout","time":233.421128411,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2307.08564\n"}
+,{"stream_name":"stdout","time":233.488919708,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2307.09096\n"}
+,{"stream_name":"stdout","time":236.049796982,"data":"  100/1199\n"}
+,{"stream_name":"stdout","time":274.069700619,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2308.01264\n"}
+,{"stream_name":"stdout","time":290.885876239,"data":"  125/1199\n"}
+,{"stream_name":"stdout","time":292.034469489,"data":"  skipping 404 on https://api.crossref.org/works/10.19852/j.cnki.jtcm.20230727.003\n"}
+,{"stream_name":"stdout","time":370.731470181,"data":"  150/1199\n"}
+,{"stream_name":"stdout","time":377.284085812,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2310.10605\n"}
+,{"stream_name":"stdout","time":381.605554447,"data":"  175/1199\n"}
+,{"stream_name":"stdout","time":382.303414345,"data":"  skipping 404 on https://api.crossref.org/works/10.3204/pubdb-2023-06615\n"}
+,{"stream_name":"stdout","time":392.619208708,"data":"  200/1199\n"}
+,{"stream_name":"stdout","time":392.816232781,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2311.15132\n"}
+,{"stream_name":"stdout","time":395.893594877,"data":"  225/1199\n"}
+,{"stream_name":"stdout","time":399.183759081,"data":"  250/1199\n"}
+,{"stream_name":"stdout","time":399.482523669,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2312.10965\n"}
+,{"stream_name":"stdout","time":399.929807273,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2312.14455\n"}
+,{"stream_name":"stdout","time":444.46921391,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2401.03550\n"}
+,{"stream_name":"stdout","time":444.469355779,"data":"  275/1199\n"}
+,{"stream_name":"stdout","time":444.568187068,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2401.04623\n"}
+,{"stream_name":"stdout","time":455.698363071,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/j.l741-3737.2009.00681.x\n"}
+,{"stream_name":"stdout","time":456.149267698,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2401.07495\n"}
+,{"stream_name":"stdout","time":456.227612568,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2401.08572\n"}
+,{"stream_name":"stdout","time":456.308962896,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2401.09857\n"}
+,{"stream_name":"stdout","time":499.561863453,"data":"  skipping 404 on https://api.crossref.org/works/10.17265/2161-6248/2014.03b.006\n"}
+,{"stream_name":"stdout","time":515.533418289,"data":"  300/1199\n"}
+,{"stream_name":"stdout","time":564.540481726,"data":"  325/1199\n"}
+,{"stream_name":"stdout","time":581.689265837,"data":"  skipping 404 on https://api.crossref.org/works/10.1515/applirev‐2016‐0014\n"}
+,{"stream_name":"stdout","time":581.990926594,"data":"  skipping 404 on https://api.crossref.org/works/10.17763/0017‐8055.85.2.149\n"}
+,{"stream_name":"stdout","time":582.457443829,"data":"  skipping 404 on https://api.crossref.org/works/10.1515/multi‐2016‐0086\n"}
+,{"stream_name":"stdout","time":582.658954701,"data":"  skipping 404 on https://api.crossref.org/works/10.46743/2160‐3715/2022.5131\n"}
+,{"stream_name":"stdout","time":617.667625168,"data":"  350/1199\n"}
+,{"stream_name":"stdout","time":618.115925767,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s12072‐023‐10553‐6\n"}
+,{"stream_name":"stdout","time":618.211990669,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41436‐018‐0288‐x\n"}
+,{"stream_name":"stdout","time":620.81630696,"data":"  skipping 404 on https://api.crossref.org/works/10.1055/s‐2007‐1021560\n"}
+,{"stream_name":"stdout","time":620.871674766,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s12098‐023‐04914‐0\n"}
+,{"stream_name":"stdout","time":621.169405569,"data":"  skipping 404 on https://api.crossref.org/works/10.1091/mbc.e06‐10‐0895\n"}
+,{"stream_name":"stdout","time":621.322453237,"data":"  skipping 404 on https://api.crossref.org/works/10.1136/jmedgenet‐2019‐106706\n"}
+,{"stream_name":"stdout","time":703.388317087,"data":"  skipping 404 on https://api.crossref.org/works/10.18449/2022rp01\n"}
+,{"stream_name":"stdout","time":753.004359687,"data":"  375/1199\n"}
+,{"stream_name":"stdout","time":785.390720151,"data":"  skipping 404 on https://api.crossref.org/works/10.13246/j.cnki.iae.2020.10.010\n"}
+,{"stream_name":"stdout","time":848.187600493,"data":"  skipping 404 on https://api.crossref.org/works/10.16011/j.cnki.jjwt.2022.02.013\n"}
+,{"stream_name":"stdout","time":848.23602292,"data":"  skipping 404 on https://api.crossref.org/works/10.16149/j.cnki.23-1523.2017.04.007\n"}
+,{"stream_name":"stdout","time":848.285738573,"data":"  skipping 404 on https://api.crossref.org/works/10.3969/j.issn.1672-0334.2017.01.004\n"}
+,{"stream_name":"stdout","time":848.334723811,"data":"  skipping 404 on https://api.crossref.org/works/10.19654/j.cnki.cjwtyj.2021.12.010\n"}
+,{"stream_name":"stdout","time":851.028688605,"data":"  skipping 404 on https://api.crossref.org/works/10.14178/j.cnki.issn1007-2101.2019.06.011\n"}
+,{"stream_name":"stdout","time":857.485923046,"data":"  skipping 404 on https://api.crossref.org/works/10.3969/j.issn.1007-3116.2013.12.007\n"}
+,{"stream_name":"stdout","time":857.537575538,"data":"  skipping 404 on https://api.crossref.org/works/10.13821/j.cnki.ceq.2022.01.12\n"}
+,{"stream_name":"stdout","time":857.635925176,"data":"  skipping 404 on https://api.crossref.org/works/10.12062/cpre.20181006\n"}
+,{"stream_name":"stdout","time":859.969338806,"data":"  skipping 404 on https://api.crossref.org/works/10.13762/j.cnki.cjlc.2022.10.007\n"}
+,{"stream_name":"stdout","time":860.293350977,"data":"  skipping 404 on https://api.crossref.org/works/10.13660/j.cnki.42-1112/c.015561\n"}
+,{"stream_name":"stdout","time":860.344761159,"data":"  skipping 404 on https://api.crossref.org/works/10.15884/j.cnki.issn.1007-0672.2021.02.009\n"}
+,{"stream_name":"stdout","time":866.737556043,"data":"  skipping 404 on https://api.crossref.org/works/10.14188/j.1671-8852.2017.06.020\n"}
+,{"stream_name":"stdout","time":948.165617797,"data":"  skipping 404 on https://api.crossref.org/works/10.14670/hh-18-751\n"}
+,{"stream_name":"stdout","time":982.811743031,"data":"  400/1199\n"}
+,{"stream_name":"stdout","time":1057.658524033,"data":"  425/1199\n"}
+,{"stream_name":"stdout","time":1068.11190216,"data":"  skipping 404 on https://api.crossref.org/works/10.17863/cam.22520\n"}
+,{"stream_name":"stdout","time":1077.935698194,"data":"  skipping 404 on https://api.crossref.org/works/10.5555/3002861\n"}
+,{"stream_name":"stdout","time":1224.725518879,"data":"  450/1199\n"}
+,{"stream_name":"stdout","time":1249.504581344,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2101.05224\n"}
+,{"stream_name":"stdout","time":1249.555862713,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1805.02641\n"}
+,{"stream_name":"stdout","time":1249.604089749,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1911.03863\n"}
+,{"stream_name":"stdout","time":1252.734263065,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/978-3-030-61609-0_35/cover\n"}
+,{"stream_name":"stdout","time":1252.886132507,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1405.3531\n"}
+,{"stream_name":"stdout","time":1261.675534283,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1608.08614\n"}
+,{"stream_name":"stdout","time":1261.775539608,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1801.02929\n"}
+,{"stream_name":"stdout","time":1311.328046444,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/978-3-030-36708-4_26/cover\n"}
+,{"stream_name":"stdout","time":1313.80261201,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1902.07208\n"}
+,{"stream_name":"stdout","time":1313.906323215,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s11747-019-00710-5/tables/1\n"}
+,{"stream_name":"stdout","time":1318.610049778,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/978-3-319-46478-7_29/tables/6\n"}
+,{"stream_name":"stdout","time":1321.389245784,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1903.01458\n"}
+,{"stream_name":"stdout","time":1335.837892946,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/978-3-030-01424-7_27/cover\n"}
+,{"stream_name":"stdout","time":1344.63290834,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s13198-024-02346-3/tables/10\n"}
+,{"stream_name":"stdout","time":1344.680206255,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s00146-022-01437-8/tables/1\n"}
+,{"stream_name":"stdout","time":1386.140086138,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1411.1792\n"}
+,{"stream_name":"stdout","time":1393.695952983,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2006.06882\n"}
+,{"stream_name":"stdout","time":1412.142415908,"data":"  475/1199\n"}
+,{"stream_name":"stdout","time":1606.771361753,"data":"  500/1199\n"}
+,{"stream_name":"stdout","time":1607.320150106,"data":"  skipping 404 on https://api.crossref.org/works/10.6515/acs.202207_38(4).20220221c\n"}
+,{"stream_name":"stdout","time":1618.878729439,"data":"  skipping 404 on https://api.crossref.org/works/10.5281/zenodo.7037337\n"}
+,{"stream_name":"stdout","time":1619.47282784,"data":"  skipping 404 on https://api.crossref.org/works/10.20959/wjpr20167-6632\n"}
+,{"stream_name":"stdout","time":1675.485795389,"data":"  skipping 404 on https://api.crossref.org/works/10.1152/jn.00549.2013.-the\n"}
+,{"stream_name":"stdout","time":1692.781568857,"data":"  skipping 404 on https://api.crossref.org/works/10.30958/ajmmc.x-y-z\n"}
+,{"stream_name":"stdout","time":1835.907859568,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2408.01075\n"}
+,{"stream_name":"stdout","time":1840.406566625,"data":"  525/1199\n"}
+,{"stream_name":"stdout","time":1912.787931421,"data":"  skipping 404 on https://api.crossref.org/works/10.5281/zenodo.10711179\n"}
+,{"stream_name":"stdout","time":1949.903970233,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s2352‐4642(19)30402‐x\n"}
+,{"stream_name":"stdout","time":1949.950806098,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s2352‐4642(23)00076‐7\n"}
+,{"stream_name":"stdout","time":1950.905608165,"data":"  skipping 404 on https://api.crossref.org/works/10.16265/j.cnki.issn1003-3033.2022.02.011\n"}
+,{"stream_name":"stdout","time":1950.951899307,"data":"  skipping 404 on https://api.crossref.org/works/10.13374/j.issn2095-9389.2020.05.27.005\n"}
+,{"stream_name":"stdout","time":1951.002634065,"data":"  skipping 404 on https://api.crossref.org/works/10.19700/j.0379-1726.2019.06.010\n"}
+,{"stream_name":"stdout","time":1953.352149077,"data":"  skipping 404 on https://api.crossref.org/works/10.13301/j.cnki.ct.2017.12.039\n"}
+,{"stream_name":"stdout","time":1953.406348167,"data":"  skipping 404 on https://api.crossref.org/works/10.16544/j.cnki.cn43-1494/u.2015.04.001\n"}
+,{"stream_name":"stdout","time":1954.024200092,"data":"  skipping 404 on https://api.crossref.org/works/10.11698/ped.2022023\n"}
+,{"stream_name":"stdout","time":1954.099800205,"data":"  skipping 404 on https://api.crossref.org/works/10.27661/d.cnki.gzhnu.2022.002978\n"}
+,{"stream_name":"stdout","time":1954.130878881,"data":"  skipping 404 on https://api.crossref.org/works/10.13225/j.cnki.jccs.2020.1416\n"}
+,{"stream_name":"stdout","time":1954.182595811,"data":"  skipping 404 on https://api.crossref.org/works/10.3969/j.issn.1006-6535.2021.04.020\n"}
+,{"stream_name":"stdout","time":1954.230335791,"data":"  skipping 404 on https://api.crossref.org/works/10.27352/d.cnki.gylgu.2020.001576\n"}
+,{"stream_name":"stdout","time":1954.295430618,"data":"  skipping 404 on https://api.crossref.org/works/10.13225/j.cnki.jccs.2023.0124\n"}
+,{"stream_name":"stdout","time":1956.596742648,"data":"  skipping 404 on https://api.crossref.org/works/10.13722/j.cnki.jrme.2020.0491\n"}
+,{"stream_name":"stdout","time":1956.646933945,"data":"  skipping 404 on https://api.crossref.org/works/10.16285/j.rsm.2018.0488\n"}
+,{"stream_name":"stdout","time":1956.901895275,"data":"  skipping 404 on https://api.crossref.org/works/10.27352/d.cnki.gylgu.2019.000050\n"}
+,{"stream_name":"stdout","time":2030.094832114,"data":"  550/1199\n"}
+,{"stream_name":"stdout","time":2145.329392892,"data":"  575/1199\n"}
+,{"stream_name":"stdout","time":2167.631026509,"data":"  skipping 404 on https://api.crossref.org/works/10.30498/ijb.2024.447077.3888\n"}
+,{"stream_name":"stdout","time":2233.780071609,"data":"  skipping 404 on https://api.crossref.org/works/10.5555/3921\n"}
+,{"stream_name":"stdout","time":2310.412446158,"data":"  skipping 404 on https://api.crossref.org/works/10.17179/excli2017-300\n"}
+,{"stream_name":"stdout","time":2311.328801479,"data":"  skipping 404 on https://api.crossref.org/works/10.16429/j.1009-7848.2022.01.013\n"}
+,{"stream_name":"stdout","time":2312.811003085,"data":"  600/1199\n"}
+,{"stream_name":"stdout","time":2407.258137147,"data":"  skipping 404 on https://api.crossref.org/works/10.1175/1520‐0493(1994)122\u003c1917:gcrtsv\u003e2.0.co;2\n"}
+,{"stream_name":"stdout","time":2429.208930363,"data":"  skipping 404 on https://api.crossref.org/works/10.1108/eb025539/full/pdf\n"}
+,{"stream_name":"stdout","time":2458.772605147,"data":"  skipping 404 on https://api.crossref.org/works/10.13140/rg.2.2.15785.67683\n"}
+,{"stream_name":"stdout","time":2468.246327203,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2005.14165\n"}
+,{"stream_name":"stdout","time":2468.346846485,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2306.17176\n"}
+,{"stream_name":"stdout","time":2468.547701173,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2312.11805\n"}
+,{"stream_name":"stdout","time":2474.298781026,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2304.10145\n"}
+,{"stream_name":"stdout","time":2494.753538781,"data":"  skipping 404 on https://api.crossref.org/works/10.37591/rrjom.v4i3.1481\n"}
+,{"stream_name":"stdout","time":2500.810849063,"data":"  skipping 404 on https://api.crossref.org/works/10.37591/jonsp.v8i3.449\n"}
+,{"stream_name":"stdout","time":2506.744397158,"data":"  skipping 404 on https://api.crossref.org/works/10.38125/oajbs.000514\n"}
+,{"stream_name":"stdout","time":2512.27788059,"data":"  skipping 404 on https://api.crossref.org/works/10.4103/ijoth.ijoth_2_20\n"}
+,{"stream_name":"stdout","time":2576.292752438,"data":"  625/1199\n"}
+,{"stream_name":"stdout","time":2606.101810031,"data":"  skipping 404 on https://api.crossref.org/works/10.19852/j.cnki.jtcm.2025.01.008\n"}
+,{"stream_name":"stdout","time":2683.544149665,"data":"  skipping 404 on https://api.crossref.org/works/10.5281/zenodo.7225014\n"}
+,{"stream_name":"stdout","time":2683.625828645,"data":"  skipping 404 on https://api.crossref.org/works/10.5281/zenodo.7643437\n"}
+,{"stream_name":"stdout","time":2683.660331117,"data":"  skipping 404 on https://api.crossref.org/works/10.5281/zenodo.11116004\n"}
+,{"stream_name":"stdout","time":2684.214052431,"data":"  skipping 404 on https://api.crossref.org/works/10.6133/apjcn.202309_32(3).0004\n"}
+,{"stream_name":"stdout","time":2688.725726954,"data":"  skipping 404 on https://api.crossref.org/works/10.11477/mf.1416200594\n"}
+,{"stream_name":"stdout","time":2688.977550817,"data":"  skipping 404 on https://api.crossref.org/works/10.3760/cma.j.cn112137-20220406-00715\n"}
+,{"stream_name":"stdout","time":2697.437518168,"data":"  skipping 404 on https://api.crossref.org/works/10.4012/dmj.2019-2250\n"}
+,{"stream_name":"stdout","time":2698.343636029,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s00223-005-017\n"}
+,{"stream_name":"stdout","time":2708.160469408,"data":"  skipping 404 on https://api.crossref.org/works/10.6129/cjp.2008.5003.04\n"}
+,{"stream_name":"stdout","time":2708.359898102,"data":"  skipping 404 on https://api.crossref.org/works/10.6497/bsept.202203_22.0001\n"}
+,{"stream_name":"stdout","time":2708.408040242,"data":"  skipping 404 on https://api.crossref.org/works/10.6167/jsr.202406_33.0001\n"}
+,{"stream_name":"stdout","time":2792.715106449,"data":"  650/1199\n"}
+,{"stream_name":"stdout","time":2792.914721767,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s2352‐3026(22)00206‐x\n"}
+,{"stream_name":"stdout","time":2838.022911244,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41586-02205473-8\n"}
+,{"stream_name":"stdout","time":3043.966018262,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s11135‐015‐0242‐9\n"}
+,{"stream_name":"stdout","time":3044.065310432,"data":"  skipping 404 on https://api.crossref.org/works/10.1037/0022‐3514.42.4.619\n"}
+,{"stream_name":"stdout","time":3044.365739396,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s0065‐2601(05)37005‐5\n"}
+,{"stream_name":"stdout","time":3044.419495372,"data":"  skipping 404 on https://api.crossref.org/works/10.1037/0022‐3514.83.5.1076\n"}
+,{"stream_name":"stdout","time":3051.336309906,"data":"  skipping 404 on https://api.crossref.org/works/10.1037/0022‐3514.78.2.223\n"}
+,{"stream_name":"stdout","time":3051.378339224,"data":"  skipping 404 on https://api.crossref.org/works/10.1146/annurev‐lawsocsci‐101518‐042843\n"}
+,{"stream_name":"stdout","time":3053.661673913,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/1468‐4446.12800\n"}
+,{"stream_name":"stdout","time":3053.764129543,"data":"  skipping 404 on https://api.crossref.org/works/10.1146/annurev‐polisci‐050718\n"}
+,{"stream_name":"stdout","time":3053.815461486,"data":"  skipping 404 on https://api.crossref.org/works/10.1046/j.0022‐4537.2003.00084.x\n"}
+,{"stream_name":"stdout","time":3054.322499296,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/j.0966‐8373.2005.00226.x\n"}
+,{"stream_name":"stdout","time":3086.988344981,"data":"  skipping 404 on https://api.crossref.org/works/10.16362/j.cnki.cn61-1457/h.2023.03.018\n"}
+,{"stream_name":"stdout","time":3088.496859029,"data":"  skipping 404 on https://api.crossref.org/works/10.22111/ijals.2022.7486\n"}
+,{"stream_name":"stdout","time":3088.794633612,"data":"  skipping 404 on https://api.crossref.org/works/10.3316/ielapa.545993140413642\n"}
+,{"stream_name":"stdout","time":3089.399366255,"data":"  skipping 404 on https://api.crossref.org/works/10.3316/informit.929872762611128\n"}
+,{"stream_name":"stdout","time":3098.875275665,"data":"  675/1199\n"}
+,{"stream_name":"stdout","time":3108.61090596,"data":"  skipping 404 on https://api.crossref.org/works/10.5502/ijw.v3i2.1\n"}
+,{"stream_name":"stdout","time":3203.408622152,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s11269‐023‐03465‐5\n"}
+,{"stream_name":"stdout","time":3206.189846944,"data":"  skipping 404 on https://api.crossref.org/works/10.3390/w1503060\n"}
+,{"stream_name":"stdout","time":3206.598907913,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s41101‐024‐00306‐3\n"}
+,{"stream_name":"stdout","time":3206.950719873,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s13201‐022‐01835‐9\n"}
+,{"stream_name":"stdout","time":3209.722358969,"data":"  skipping 404 on https://api.crossref.org/works/10.1061/(asce)he.1943‐5584.0001292\n"}
+,{"stream_name":"stdout","time":3253.189581953,"data":"  skipping 404 on https://api.crossref.org/works/10.13870/j.cnki.stbcxb.2011.05.020\n"}
+,{"stream_name":"stdout","time":3253.240761013,"data":"  skipping 404 on https://api.crossref.org/works/10.16232/j.cnki.1001-4179.2007.02.021\n"}
+,{"stream_name":"stdout","time":3255.977190676,"data":"  skipping 404 on https://api.crossref.org/works/10.13246/j.cnki.jae.20210817.001\n"}
+,{"stream_name":"stdout","time":3256.115095403,"data":"  skipping 404 on https://api.crossref.org/works/10.13902/j.cnki.syyj.2023.02.005\n"}
+,{"stream_name":"stdout","time":3256.227245808,"data":"  skipping 404 on https://api.crossref.org/works/10.13870/j.cnki.stbcxb.2023.06.043\n"}
+,{"stream_name":"stdout","time":3258.657729608,"data":"  skipping 404 on https://api.crossref.org/works/10.13733/j.jcam.issn.2095-5553.2022.02.028\n"}
+,{"stream_name":"stdout","time":3258.858798772,"data":"  skipping 404 on https://api.crossref.org/works/10.15931/j.cnki.1006-1096.2012.04.004\n"}
+,{"stream_name":"stdout","time":3262.408411845,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/j.jclepro.2019.11768\n"}
+,{"stream_name":"stdout","time":3262.859052469,"data":"  skipping 404 on https://api.crossref.org/works/10.13249/j.cnki.sgs.2021.02.012\n"}
+,{"stream_name":"stdout","time":3265.851949354,"data":"  skipping 404 on https://api.crossref.org/works/10.16619/j.cnki.rmltxsqy.2024.10.003\n"}
+,{"stream_name":"stdout","time":3266.105699857,"data":"  skipping 404 on https://api.crossref.org/works/10.19714/j.cnki.1671-7465.2023.0016\n"}
+,{"stream_name":"stdout","time":3266.203489866,"data":"  skipping 404 on https://api.crossref.org/works/10.13331/j.cnki.jhau(ss).2018.06.003\n"}
+,{"stream_name":"stdout","time":3266.309159288,"data":"  skipping 404 on https://api.crossref.org/works/10.13733/j.jcam.issn.2095-5553.2023.11.038\n"}
+,{"stream_name":"stdout","time":3266.355325997,"data":"  skipping 404 on https://api.crossref.org/works/10.13246/j.cnki.jae.2020.08.002\n"}
+,{"stream_name":"stdout","time":3266.454821915,"data":"  skipping 404 on https://api.crossref.org/works/10.14088/j.cnki.issn0439-8114.2023.07.033\n"}
+,{"stream_name":"stdout","time":3266.507717593,"data":"  skipping 404 on https://api.crossref.org/works/10.13546/j.cnki.tjyjc.2010.06.019\n"}
+,{"stream_name":"stdout","time":3276.652495272,"data":"  700/1199\n"}
+,{"stream_name":"stdout","time":3287.77811877,"data":"  skipping 404 on https://api.crossref.org/works/10.7480/footprint.9.1.901\n"}
+,{"stream_name":"stdout","time":3370.040673545,"data":"  skipping 404 on https://api.crossref.org/works/10.1177/027112141142648\n"}
+,{"stream_name":"stdout","time":3376.8611276,"data":"  725/1199\n"}
+,{"stream_name":"stdout","time":3404.14739132,"data":"  skipping 404 on https://api.crossref.org/works/10.1002/1097-0142(197207)30:13.0.co;2-d\n"}
+,{"stream_name":"stdout","time":3438.077370742,"data":"  skipping 404 on https://api.crossref.org/works/10.25501/soas.00024947\n"}
+,{"stream_name":"stdout","time":3474.511431566,"data":"  750/1199\n"}
+,{"stream_name":"stdout","time":3499.426563507,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s1474‐4422(21)00066‐1\n"}
+,{"stream_name":"stdout","time":3499.575928892,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s0140‐6736(15)01124‐1\n"}
+,{"stream_name":"stdout","time":3499.622773506,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s1474‐4422(16)00070‐3\n"}
+,{"stream_name":"stdout","time":3499.771096163,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s00401‐020‐02195‐x\n"}
+,{"stream_name":"stdout","time":3499.822786706,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41591‐020‐0755‐1\n"}
+,{"stream_name":"stdout","time":3499.872491613,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41591‐018‐0304‐3\n"}
+,{"stream_name":"stdout","time":3499.92437512,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s43587‐020‐00003‐5\n"}
+,{"stream_name":"stdout","time":3500.023445324,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s43587‐023‐00565‐0\n"}
+,{"stream_name":"stdout","time":3502.652739516,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s10072‐023‐06882‐x\n"}
+,{"stream_name":"stdout","time":3502.805372586,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41591‐022‐01822‐2\n"}
+,{"stream_name":"stdout","time":3502.851335544,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41572‐021‐00269‐y\n"}
+,{"stream_name":"stdout","time":3502.953268764,"data":"  skipping 404 on https://api.crossref.org/works/10.1523/jneurosci.20‐18‐06920.2000\n"}
+,{"stream_name":"stdout","time":3503.001964818,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s0140‐6736(99)00309‐8\n"}
+,{"stream_name":"stdout","time":3503.055793678,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s11745‐001‐0676‐x\n"}
+,{"stream_name":"stdout","time":3503.30529036,"data":"  skipping 404 on https://api.crossref.org/works/10.1186/s13195‐022‐01087‐4\n"}
+,{"stream_name":"stdout","time":3503.555329821,"data":"  skipping 404 on https://api.crossref.org/works/10.1097/00001756‐200211150‐00032\n"}
+,{"stream_name":"stdout","time":3503.6066881,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/j.1600‐0404.2006.00693.x\n"}
+,{"stream_name":"stdout","time":3503.85921262,"data":"  skipping 404 on https://api.crossref.org/works/10.1186/s12974‐018‐1313‐3\n"}
+,{"stream_name":"stdout","time":3503.906823591,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41581‐021‐00430‐6\n"}
+,{"stream_name":"stdout","time":3504.104543188,"data":"  skipping 404 on https://api.crossref.org/works/10.25318/82-003-x201901000001-eng\n"}
+,{"stream_name":"stdout","time":3532.519328355,"data":"  skipping 404 on https://api.crossref.org/works/10.17206/apjrece.2020.14\n"}
+,{"stream_name":"stdout","time":3537.831527118,"data":"  skipping 404 on https://api.crossref.org/works/10.52534/msu-pp.8(2).2022.76-84\n"}
+,{"stream_name":"stdout","time":3538.081747022,"data":"  skipping 404 on https://api.crossref.org/works/10.21071/psye.v15i1.15345\n"}
+,{"stream_name":"stdout","time":3541.239021047,"data":"  skipping 404 on https://api.crossref.org/works/10.14456/abacodijournal.2023.3\n"}
+,{"stream_name":"stdout","time":3545.128787366,"data":"  775/1199\n"}
+,{"stream_name":"stdout","time":3582.983247702,"data":"  skipping 404 on https://api.crossref.org/works/10.1191/1478088704qp004oa\n"}
+,{"stream_name":"stdout","time":3624.604991431,"data":"  skipping 404 on https://api.crossref.org/works/10.1108/ijpl-12-2015-0032ieu\n"}
+,{"stream_name":"stdout","time":3658.494075882,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41467‐020‐18471‐z\n"}
+,{"stream_name":"stdout","time":3658.703721456,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/j.ijmecsci.2024.109080‐10.1016/j.ijmecsci.2024.109080\n"}
+,{"stream_name":"stdout","time":3658.85437624,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s12274‐022‐4152‐6\n"}
+,{"stream_name":"stdout","time":3659.056358422,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41528‐022‐00195‐3\n"}
+,{"stream_name":"stdout","time":3659.205193214,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s42256‐023‐00671‐z\n"}
+,{"stream_name":"stdout","time":3659.250671883,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41467‐023‐42323‐1\n"}
+,{"stream_name":"stdout","time":3659.404535313,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41528‐022‐00139‐x\n"}
+,{"stream_name":"stdout","time":3659.505434857,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/j.device.2023.100226‐10.1016/j.device.2023.100226\n"}
+,{"stream_name":"stdout","time":3659.86019106,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41378‐022‐00465‐0\n"}
+,{"stream_name":"stdout","time":3660.055880334,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41598‐023‐48789‐9\n"}
+,{"stream_name":"stdout","time":3660.37268773,"data":"  skipping 404 on https://api.crossref.org/works/10.19581/j.cnki.ciejournal.2012.01.014\n"}
+,{"stream_name":"stdout","time":3660.467612344,"data":"  skipping 404 on https://api.crossref.org/works/10.19744/j.cnki.11-1235/f.2019.0070\n"}
+,{"stream_name":"stdout","time":3661.472806844,"data":"  skipping 404 on https://api.crossref.org/works/10.16493/j.cnki.42-1627/c.20221124.001\n"}
+,{"stream_name":"stdout","time":3664.859357326,"data":"  skipping 404 on https://api.crossref.org/works/10.16123/j.cnki.issn.1000-355x.2021.05.007\n"}
+,{"stream_name":"stdout","time":3664.91362999,"data":"  skipping 404 on https://api.crossref.org/works/10.19847/j.issn1008-2646.2023.06.007\n"}
+,{"stream_name":"stdout","time":3665.007669213,"data":"  skipping 404 on https://api.crossref.org/works/10.19622/j.cnki.cn36-1005/f.2024.04.004\n"}
+,{"stream_name":"stdout","time":3665.057874023,"data":"  skipping 404 on https://api.crossref.org/works/10.19647/j.cnki.37-1462/f.2024.07.007\n"}
+,{"stream_name":"stdout","time":3665.329269645,"data":"  skipping 404 on https://api.crossref.org/works/10.16529/j.cnki.11-4613/f.2020.05.006\n"}
+,{"stream_name":"stdout","time":3683.056090251,"data":"  800/1199\n"}
+,{"stream_name":"stdout","time":3723.829396483,"data":"  skipping 404 on https://api.crossref.org/works/10.4230/lipics.ecoop.2016.15\n"}
+,{"stream_name":"stdout","time":3726.533923366,"data":"  skipping 404 on https://api.crossref.org/works/10.5281/zenodo.15050505\n"}
+,{"stream_name":"stdout","time":3729.152098007,"data":"  skipping 404 on https://api.crossref.org/works/10.1044/0161-1461(2008/003\n"}
+,{"stream_name":"stdout","time":3827.723095398,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2405.08644\n"}
+,{"stream_name":"stdout","time":3847.618267862,"data":"  825/1199\n"}
+,{"stream_name":"stdout","time":3975.404963633,"data":"  skipping 404 on https://api.crossref.org/works/10.22038/ijbms.2025.80989.17525\n"}
+,{"stream_name":"stdout","time":3993.495957651,"data":"  850/1199\n"}
+,{"stream_name":"stdout","time":4001.827660527,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2004.00686\n"}
+,{"stream_name":"stdout","time":4004.376778454,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1801.04346\n"}
+,{"stream_name":"stdout","time":4004.678660778,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2311.02242\n"}
+,{"stream_name":"stdout","time":4004.924721285,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2410.08418\n"}
+,{"stream_name":"stdout","time":4004.97149923,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2208.08628\n"}
+,{"stream_name":"stdout","time":4010.129561751,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2306.11932\n"}
+,{"stream_name":"stdout","time":4013.455670766,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2309.01219\n"}
+,{"stream_name":"stdout","time":4015.124766588,"data":"  skipping 404 on https://api.crossref.org/works/10.22038/ijbms.2025.81908.17719\n"}
+,{"stream_name":"stdout","time":4017.596271501,"data":"  skipping 404 on https://api.crossref.org/works/10.1044/0161-1461(2006/022\n"}
+,{"stream_name":"stdout","time":4020.951678134,"data":"  skipping 404 on https://api.crossref.org/works/10.4172/jspt.1000e103\n"}
+,{"stream_name":"stdout","time":4025.671256241,"data":"  skipping 404 on https://api.crossref.org/works/10.1044/1092-4388(2012/11-0173\n"}
+,{"stream_name":"stdout","time":4028.65651385,"data":"  skipping 404 on https://api.crossref.org/works/10.1044/1058-0360(2012/10-0078\n"}
+,{"stream_name":"stdout","time":4145.055791157,"data":"  skipping 404 on https://api.crossref.org/works/10.1177/1363460716684509′\n"}
+,{"stream_name":"stdout","time":4155.487660304,"data":"  875/1199\n"}
+,{"stream_name":"stdout","time":4178.83104403,"data":"  skipping 404 on https://api.crossref.org/works/10.3389/fpsyg.2011.00248/bibtex\n"}
+,{"stream_name":"stdout","time":4216.6569385,"data":"  skipping 404 on https://api.crossref.org/works/10.5281/zenodo.16748335\n"}
+,{"stream_name":"stdout","time":4229.279101337,"data":"  skipping 404 on https://api.crossref.org/works/10.5281/zenodo.16935993\n"}
+,{"stream_name":"stdout","time":4241.554117133,"data":"  skipping 404 on https://api.crossref.org/works/10.5281/zenodo.13947485\n"}
+,{"stream_name":"stdout","time":4290.408743406,"data":"  900/1199\n"}
+,{"stream_name":"stdout","time":4304.530440725,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s13201‐022‐01856‐4\n"}
+,{"stream_name":"stdout","time":4305.333018344,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s11205‐009‐9501‐2\n"}
+,{"stream_name":"stdout","time":4309.679728004,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s13201‐021‐01523‐0\n"}
+,{"stream_name":"stdout","time":4312.671359428,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s11269‐011‐9907‐x\n"}
+,{"stream_name":"stdout","time":4315.728813873,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s0305‐750x(02)00035‐9\n"}
+,{"stream_name":"stdout","time":4315.781875004,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/1477‐8947.00054\n"}
+,{"stream_name":"stdout","time":4348.912673329,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1409.0473\n"}
+,{"stream_name":"stdout","time":4351.924145133,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1810.04805\n"}
+,{"stream_name":"stdout","time":4357.746376347,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1907.11692\n"}
+,{"stream_name":"stdout","time":4357.795180366,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2202.03829\n"}
+,{"stream_name":"stdout","time":4363.421619196,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1910.01108\n"}
+,{"stream_name":"stdout","time":4363.635215014,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1706.03762\n"}
+,{"stream_name":"stdout","time":4377.526636711,"data":"  skipping 404 on https://api.crossref.org/works/10.7518/hxkq.2025.2025053\n"}
+,{"stream_name":"stdout","time":4441.214585428,"data":"  skipping 404 on https://api.crossref.org/works/10.13328/j.cnki.jos.006429\n"}
+,{"stream_name":"stdout","time":4444.15521313,"data":"  skipping 404 on https://api.crossref.org/works/10.1093/crocol/otaf051\n"}
+,{"stream_name":"stdout","time":4465.779128474,"data":"  925/1199\n"}
+,{"stream_name":"stdout","time":4532.97883716,"data":"  skipping 404 on https://api.crossref.org/works/10.1073/pnas.221429111\n"}
+,{"stream_name":"stdout","time":4587.194289572,"data":"  skipping 404 on https://api.crossref.org/works/10.46234/ccdcw2022.156\n"}
+,{"stream_name":"stdout","time":4587.23851163,"data":"  skipping 404 on https://api.crossref.org/works/10.3969/j.issn.1001-568x.2023.12.0006\n"}
+,{"stream_name":"stdout","time":4587.28987923,"data":"  skipping 404 on https://api.crossref.org/works/10.11847/zgggws1139802\n"}
+,{"stream_name":"stdout","time":4588.101679475,"data":"  skipping 404 on https://api.crossref.org/works/10.3760/cma.j.issn.1674-0815.2014.02.004\n"}
+,{"stream_name":"stdout","time":4588.149511161,"data":"  skipping 404 on https://api.crossref.org/works/10.3760/cma.j.issn.1674-0815.2011.01.003\n"}
+,{"stream_name":"stdout","time":4590.742852219,"data":"  skipping 404 on https://api.crossref.org/works/10.3760/cma.j.cn115791-20241203-00705\n"}
+,{"stream_name":"stdout","time":4639.773535835,"data":"  skipping 404 on https://api.crossref.org/works/10.1021/acsabm.3c00244/asset/images/large/mt3c00244_0006.jpeg\n"}
+,{"stream_name":"stdout","time":4639.959051058,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/bf00708975/metrics\n"}
+,{"stream_name":"stdout","time":4640.109115893,"data":"  skipping 404 on https://api.crossref.org/works/10.3390/molecules29163824/s1\n"}
+,{"stream_name":"stdout","time":4640.209879069,"data":"  skipping 404 on https://api.crossref.org/works/10.1021/ar500046r/asset/images/large/ar-2014-00046r_0012.jpeg\n"}
+,{"stream_name":"stdout","time":4640.357393856,"data":"  skipping 404 on https://api.crossref.org/works/10.1021/cr8002196/asset/images/medium/cr-2008-002196_0021.gif\n"}
+,{"stream_name":"stdout","time":4640.476812335,"data":"  skipping 404 on https://api.crossref.org/works/10.1021/cr500392w/asset/images/large/cr-2014-00392w_0033.jpeg\n"}
+,{"stream_name":"stdout","time":4640.509169486,"data":"  skipping 404 on https://api.crossref.org/works/10.1021/acs.chemrev.8b00605/asset/images/large/cr-2018-006056_0043.jpeg\n"}
+,{"stream_name":"stdout","time":4640.758797339,"data":"  skipping 404 on https://api.crossref.org/works/10.3389/fbioe.2021.768698/full\n"}
+,{"stream_name":"stdout","time":4640.812003783,"data":"  skipping 404 on https://api.crossref.org/works/10.1021/acsomega.0c05168/asset/images/medium/ao0c05168_m003.gif\n"}
+,{"stream_name":"stdout","time":4641.061521599,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s00706-021-02736-4/tables/1\n"}
+,{"stream_name":"stdout","time":4641.310245021,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s00894-020-04416-2/figures/6\n"}
+,{"stream_name":"stdout","time":4643.819549027,"data":"  skipping 404 on https://api.crossref.org/works/10.1021/jp9716997/asset/images/large/jp9716997f00004.jpeg\n"}
+,{"stream_name":"stdout","time":4646.543599281,"data":"  skipping 404 on https://api.crossref.org/works/10.1021/ct100641a/suppl_file/ct100641a_si_001.pdf\n"}
+,{"stream_name":"stdout","time":4646.64007612,"data":"  skipping 404 on https://api.crossref.org/works/10.1021/ar00109a003/asset/ar00109a003.fp.png_v03\n"}
+,{"stream_name":"stdout","time":4659.394940565,"data":"  skipping 404 on https://api.crossref.org/works/10.15036/arerugi.62.1575\n"}
+,{"stream_name":"stdout","time":4701.241709787,"data":"  950/1199\n"}
+,{"stream_name":"stdout","time":4791.441245818,"data":"  skipping 404 on https://api.crossref.org/works/10.11910/2227-6394.2018.06.03.04\n"}
+,{"stream_name":"stdout","time":4920.463454236,"data":"  skipping 404 on https://api.crossref.org/works/10.1093/pubmed/27928490\n"}
+,{"stream_name":"stdout","time":4978.094235489,"data":"  skipping 404 on https://api.crossref.org/works/10.17250/khisli.34.201709.004\n"}
+,{"stream_name":"stdout","time":4980.766068091,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/j.lindif.2020.1018\n"}
+,{"stream_name":"stdout","time":5015.828249937,"data":"  975/1199\n"}
+,{"stream_name":"stdout","time":5015.9264729,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/j.2041‐210x.2011.00172.x\n"}
+,{"stream_name":"stdout","time":5016.125298706,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41586‐020‐2531‐2\n"}
+,{"stream_name":"stdout","time":5016.236369994,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s43586‐024‐00294‐7\n"}
+,{"stream_name":"stdout","time":5018.731665217,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s43017‐024‐00566‐6\n"}
+,{"stream_name":"stdout","time":5019.028260635,"data":"  skipping 404 on https://api.crossref.org/works/10.5555/3294771.3294869\n"}
+,{"stream_name":"stdout","time":5019.079669258,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41559‐021‐01542‐9\n"}
+,{"stream_name":"stdout","time":5021.997262313,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41597‐020‐00599‐8\n"}
+,{"stream_name":"stdout","time":5022.416444514,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41559‐023‐02206‐6\n"}
+,{"stream_name":"stdout","time":5022.715631526,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/j.1466‐8238.2007.00358.x\n"}
+,{"stream_name":"stdout","time":5022.81286543,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41598‐018‐25437‐1\n"}
+,{"stream_name":"stdout","time":5022.914394033,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/j.1600‐0587.2013.07872.x\n"}
+,{"stream_name":"stdout","time":5023.01443201,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/2041‐210x.13124\n"}
+,{"stream_name":"stdout","time":5023.065016203,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41597‐022‐01284‐8\n"}
+,{"stream_name":"stdout","time":5023.36782317,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/j.0906‐7590.2008.5203.x\n"}
+,{"stream_name":"stdout","time":5023.466387089,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41558‐019‐0406‐z\n"}
+,{"stream_name":"stdout","time":5023.616474493,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41467‐022‐28270‐3\n"}
+,{"stream_name":"stdout","time":5023.768017585,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/2041‐210x.14228\n"}
+,{"stream_name":"stdout","time":5023.814827544,"data":"  skipping 404 on https://api.crossref.org/works/10.5194/hess‐26‐5163‐2022\n"}
+,{"stream_name":"stdout","time":5024.088307962,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41598‐022‐16837‐5\n"}
+,{"stream_name":"stdout","time":5024.120716006,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/j.1558‐5646.2008.00482.x\n"}
+,{"stream_name":"stdout","time":5024.372351059,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s42256‐022‐00462‐y\n"}
+,{"stream_name":"stdout","time":5024.474428075,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s0304‐3800(02)00199‐0\n"}
+,{"stream_name":"stdout","time":5024.521552233,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41597‐022‐01493‐1\n"}
+,{"stream_name":"stdout","time":5089.015706312,"data":"  skipping 404 on https://api.crossref.org/works/10.18148/srm/2020.v14i5.7641\n"}
+,{"stream_name":"stdout","time":5089.164278964,"data":"  skipping 404 on https://api.crossref.org/works/10.18148/srm/2015.v9i2.6128\n"}
+,{"stream_name":"stdout","time":5118.32391304,"data":"  skipping 404 on https://api.crossref.org/works/10.13870/j.cnki.stbcxb.2024.02.03\n"}
+,{"stream_name":"stdout","time":5167.016494046,"data":"  skipping 404 on https://api.crossref.org/works/10.57647/j.jtap.2023.1705.55\n"}
+,{"stream_name":"stdout","time":5215.038173615,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/j.jairtraman.2020.101820\n"}
+,{"stream_name":"stdout","time":5215.090323008,"data":"  skipping 404 on https://api.crossref.org/works/10.1175/bams-d-13-00233.1\n"}
+,{"stream_name":"stdout","time":5217.548840239,"data":"  skipping 404 on https://api.crossref.org/works/10.1175/bams\n"}
+,{"stream_name":"stdout","time":5217.60412205,"data":"  skipping 404 on https://api.crossref.org/works/10.1175/1520-0450(1985)024\n"}
+,{"stream_name":"stdout","time":5219.46736049,"data":"  skipping 404 on https://api.crossref.org/works/10.1175/jamc-d-17-0212.1\n"}
+,{"stream_name":"stdout","time":5220.279833395,"data":"  skipping 404 on https://api.crossref.org/works/10.1175/jcli\n"}
+,{"stream_name":"stdout","time":5224.961721012,"data":"  skipping 404 on https://api.crossref.org/works/10.5281/zenodo.7135345\n"}
+,{"stream_name":"stdout","time":5227.884108727,"data":"  skipping 404 on https://api.crossref.org/works/10.22105/jfea.2021.287294.1149\n"}
+,{"stream_name":"stdout","time":5234.917078372,"data":"  skipping 404 on https://api.crossref.org/works/10.22105/jfea.2024.422211.1313\n"}
+,{"stream_name":"stdout","time":5235.34079406,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.1406.2000\n"}
+,{"stream_name":"stdout","time":5235.786875425,"data":"  1000/1199\n"}
+,{"stream_name":"stdout","time":5236.168840208,"data":"  skipping 404 on https://api.crossref.org/works/10.30476/jamp.2022.95660.1653\n"}
+,{"stream_name":"stdout","time":5453.824776552,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/11941439114\n"}
+,{"stream_name":"stdout","time":5581.376965244,"data":"  skipping 404 on https://api.crossref.org/works/10.36131/cnfioritieditore20250301\n"}
+,{"stream_name":"stdout","time":5583.845205784,"data":"  1025/1199\n"}
+,{"stream_name":"stdout","time":5732.406387224,"data":"  skipping 404 on https://api.crossref.org/works/10.1101/2025.05.04.651803v1\n"}
+,{"stream_name":"stdout","time":5741.042050316,"data":"  skipping 404 on https://api.crossref.org/works/10.1101/2024.01.08.574736v1\n"}
+,{"stream_name":"stdout","time":5748.378629976,"data":"  skipping 404 on https://api.crossref.org/works/10.3969/j.issn.1672-1756.2022.12.006\n"}
+,{"stream_name":"stdout","time":5748.636145852,"data":"  skipping 404 on https://api.crossref.org/works/10.3870/j.issn.1001-4152.2023.19.012\n"}
+,{"stream_name":"stdout","time":5748.981232444,"data":"  skipping 404 on https://api.crossref.org/works/10.13342/j.cnki.cjhp.2014.12.039\n"}
+,{"stream_name":"stdout","time":5749.031450244,"data":"  skipping 404 on https://api.crossref.org/works/10.3969/j.issn.1672-1756.2022.06.011\n"}
+,{"stream_name":"stdout","time":5810.513634367,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2310.14735\n"}
+,{"stream_name":"stdout","time":5821.357040762,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2402.07927\n"}
+,{"stream_name":"stdout","time":5846.819693055,"data":"  skipping 404 on https://api.crossref.org/works/10.13106/jafeb.2021.vol8.no6.0327\n"}
+,{"stream_name":"stdout","time":5850.132061735,"data":"  1050/1199\n"}
+,{"stream_name":"stdout","time":5859.078447708,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/j.molliq.2021.11595\n"}
+,{"stream_name":"stdout","time":5888.358545905,"data":"  skipping 404 on https://api.crossref.org/works/10.1061/(asce)0733-9445(1988)114:8(1804\n"}
+,{"stream_name":"stdout","time":5935.85820546,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s10648-010-9124-1\n"}
+,{"stream_name":"stdout","time":5946.869338835,"data":"  skipping 404 on https://api.crossref.org/works/10.13140/rg.2.2.29105.45929\n"}
+,{"stream_name":"stdout","time":5947.027854288,"data":"  skipping 404 on https://api.crossref.org/works/10.20431/2454-9479.0603001\n"}
+,{"stream_name":"stdout","time":6047.121579305,"data":"  skipping 404 on https://api.crossref.org/works/10.1186/s13017‐021‐00381‐0\n"}
+,{"stream_name":"stdout","time":6049.802247725,"data":"  skipping 404 on https://api.crossref.org/works/10.1186/2046‐4053‐4‐1\n"}
+,{"stream_name":"stdout","time":6049.89860465,"data":"  skipping 404 on https://api.crossref.org/works/10.11124/jbies‐20‐00167\n"}
+,{"stream_name":"stdout","time":6049.94852838,"data":"  skipping 404 on https://api.crossref.org/works/10.7326/m18‐0850.12\n"}
+,{"stream_name":"stdout","time":6049.995136293,"data":"  skipping 404 on https://api.crossref.org/works/10.1186/s13643‐020‐01542‐z\n"}
+,{"stream_name":"stdout","time":6102.53444379,"data":"  skipping 404 on https://api.crossref.org/works/10.1146/annurev.energy.30.050504.144511/cite/refworks\n"}
+,{"stream_name":"stdout","time":6109.300437116,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s43621-025-01210-z/figures/9\n"}
+,{"stream_name":"stdout","time":6119.866419327,"data":"  1075/1199\n"}
+,{"stream_name":"stdout","time":6130.36918713,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s11414-008-9138-y/metrics\n"}
+,{"stream_name":"stdout","time":6130.570361055,"data":"  skipping 404 on https://api.crossref.org/works/10.3389/fpubh.2023.1282662/full\n"}
+,{"stream_name":"stdout","time":6130.81911146,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s11266-014-9481-y/metrics\n"}
+,{"stream_name":"stdout","time":6131.82358743,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s11256-020-00573-z/metrics\n"}
+,{"stream_name":"stdout","time":6135.130405816,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s10802-005-0931-2/metrics\n"}
+,{"stream_name":"stdout","time":6137.94903165,"data":"  skipping 404 on https://api.crossref.org/works/10.1002/jcop\n"}
+,{"stream_name":"stdout","time":6250.894549352,"data":"  skipping 404 on https://api.crossref.org/works/10.1207/s15327833mtl0804\n"}
+,{"stream_name":"stdout","time":6328.391734039,"data":"  skipping 404 on https://api.crossref.org/works/10.7275/2z1k-3k28\n"}
+,{"stream_name":"stdout","time":6341.905578242,"data":"  skipping 404 on https://api.crossref.org/works/10.3233/bpl‐160040\n"}
+,{"stream_name":"stdout","time":6341.953341866,"data":"  skipping 404 on https://api.crossref.org/works/10.1034/j.1600‐0447.2003.00090.x\n"}
+,{"stream_name":"stdout","time":6342.056018758,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s0920‐9964(01)00402‐9\n"}
+,{"stream_name":"stdout","time":6342.260527103,"data":"  skipping 404 on https://api.crossref.org/works/10.1037/0882‐7974.5.1.48\n"}
+,{"stream_name":"stdout","time":6342.358299309,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/j.1755‐5949.2009.00110.x\n"}
+,{"stream_name":"stdout","time":6342.606808591,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/j.1600‐0447.2005.00565.x\n"}
+,{"stream_name":"stdout","time":6342.808020868,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s0006‐3223(99)00247‐4\n"}
+,{"stream_name":"stdout","time":6345.354885949,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/0005‐7967(94)00075‐u\n"}
+,{"stream_name":"stdout","time":6346.30408607,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s12263‐009‐0134‐5\n"}
+,{"stream_name":"stdout","time":6443.262678046,"data":"  1100/1199\n"}
+,{"stream_name":"stdout","time":6456.779817634,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2303.08014\n"}
+,{"stream_name":"stdout","time":6493.605495002,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/j.1467‐9620.2006.00782.x\n"}
+,{"stream_name":"stdout","time":6496.941665145,"data":"  skipping 404 on https://api.crossref.org/works/10.1080/004005841.2013.770326\n"}
+,{"stream_name":"stdout","time":6505.038658751,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s11145‐018‐9889‐7\n"}
+,{"stream_name":"stdout","time":6505.290517315,"data":"  skipping 404 on https://api.crossref.org/works/10.3200/psfl.53.4.267‐277\n"}
+,{"stream_name":"stdout","time":6608.281751577,"data":"  skipping 404 on https://api.crossref.org/works/10.47172/2965‐730x.sdgsreview.v5.n02.pe03496\n"}
+,{"stream_name":"stdout","time":6608.331838202,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41598‐024‐82187‐z\n"}
+,{"stream_name":"stdout","time":6608.730361522,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s10643‐024‐01675‐z\n"}
+,{"stream_name":"stdout","time":6608.888996265,"data":"  skipping 404 on https://api.crossref.org/works/10.1007/s10643‐025‐02006‐6\n"}
+,{"stream_name":"stdout","time":6609.032192925,"data":"  skipping 404 on https://api.crossref.org/works/10.3928/24748307‐20190405‐02\n"}
+,{"stream_name":"stdout","time":6612.381967065,"data":"  skipping 404 on https://api.crossref.org/works/10.5555/cjt.1008-1275.10.01.p3.01\n"}
+,{"stream_name":"stdout","time":6664.76060678,"data":"  skipping 404 on https://api.crossref.org/works/10.30466/ijltr.2024.54858.2581\n"}
+,{"stream_name":"stdout","time":6665.932945058,"data":"  skipping 404 on https://api.crossref.org/works/10.1080/13611267.2021.author’s86798\n"}
+,{"stream_name":"stdout","time":6687.942908418,"data":"  1125/1199\n"}
+,{"stream_name":"stdout","time":6699.832047823,"data":"  skipping 404 on https://api.crossref.org/works/10.1126/scitranslmed.3003748\u0026lt;/otherinfo\u0026gt\n"}
+,{"stream_name":"stdout","time":6796.731734411,"data":"  skipping 404 on https://api.crossref.org/works/10.22074/cellj.2018.4919\n"}
+,{"stream_name":"stdout","time":6807.956913118,"data":"  skipping 404 on https://api.crossref.org/works/10.3760/cma.j.cn112141-20240419-00228\n"}
+,{"stream_name":"stdout","time":6810.422453721,"data":"  skipping 404 on https://api.crossref.org/works/10.22074/cellj.2022.8087\n"}
+,{"stream_name":"stdout","time":6906.669859499,"data":"  1150/1199\n"}
+,{"stream_name":"stdout","time":6924.653263786,"data":"  skipping 404 on https://api.crossref.org/works/10.13966/j.cnki.kfjyyj.2020.02.008\n"}
+,{"stream_name":"stdout","time":6927.998106647,"data":"  skipping 404 on https://api.crossref.org/works/10.16194/j.cnki.31-1059/g4.2011.05.010\n"}
+,{"stream_name":"stdout","time":6928.498873585,"data":"  skipping 404 on https://api.crossref.org/works/10.48550/arxiv.2001.09326\n"}
+,{"stream_name":"stdout","time":7016.0306742,"data":"  skipping 404 on https://api.crossref.org/works/10.1044/1092-4388(2007/015\n"}
+,{"stream_name":"stdout","time":7090.609087915,"data":"  skipping 404 on https://api.crossref.org/works/10.7652/xjtuxb201710008\n"}
+,{"stream_name":"stdout","time":7091.1601083,"data":"  skipping 404 on https://api.crossref.org/works/10.1207/s15327965pli1104\n"}
+,{"stream_name":"stdout","time":7112.224266895,"data":"  skipping 404 on https://api.crossref.org/works/10.5681/hpp.2012.005\n"}
+,{"stream_name":"stdout","time":7128.296735217,"data":"  skipping 404 on https://api.crossref.org/works/10.1186/s12981‐025‐00745‐5\n"}
+,{"stream_name":"stdout","time":7128.628735195,"data":"  skipping 404 on https://api.crossref.org/works/10.1186/s12961‐020‐00673‐y\n"}
+,{"stream_name":"stdout","time":7128.682426751,"data":"  skipping 404 on https://api.crossref.org/works/10.1186/s12879‐019‐4410‐8\n"}
+,{"stream_name":"stdout","time":7128.731515063,"data":"  skipping 404 on https://api.crossref.org/works/10.1186/s12981‐023‐00572‐6\n"}
+,{"stream_name":"stdout","time":7128.829042327,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.00460‐11\n"}
+,{"stream_name":"stdout","time":7128.883536129,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.06150‐11\n"}
+,{"stream_name":"stdout","time":7128.930924462,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.01020‐12\n"}
+,{"stream_name":"stdout","time":7128.992520529,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.02520‐10\n"}
+,{"stream_name":"stdout","time":7129.129661562,"data":"  skipping 404 on https://api.crossref.org/works/10.1186/s12967‐014‐0335‐6\n"}
+,{"stream_name":"stdout","time":7129.187006795,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.78.7.3233‐3243.2004\n"}
+,{"stream_name":"stdout","time":7129.330080209,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.06728‐11\n"}
+,{"stream_name":"stdout","time":7129.381756798,"data":"  skipping 404 on https://api.crossref.org/works/10.1186/1471‐2172‐9‐1\n"}
+,{"stream_name":"stdout","time":7129.429679655,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.00539‐12\n"}
+,{"stream_name":"stdout","time":7129.58352266,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.00320‐10\n"}
+,{"stream_name":"stdout","time":7131.809633166,"data":"  skipping 404 on https://api.crossref.org/works/10.1590/s1679‐45082011md1914\n"}
+,{"stream_name":"stdout","time":7132.05647939,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.01472‐10\n"}
+,{"stream_name":"stdout","time":7132.106307082,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.02543‐10\n"}
+,{"stream_name":"stdout","time":7132.259349363,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s43856‐025‐01001‐7\n"}
+,{"stream_name":"stdout","time":7132.306613697,"data":"  skipping 404 on https://api.crossref.org/works/10.1186/1478‐4505‐5‐13\n"}
+,{"stream_name":"stdout","time":7132.357691412,"data":"  skipping 404 on https://api.crossref.org/works/10.1186/s12992‐018‐0341‐1\n"}
+,{"stream_name":"stdout","time":7132.409198934,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.74.12.5679‐5690.2000\n"}
+,{"stream_name":"stdout","time":7132.457605242,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.76.20.10155‐10168.2002\n"}
+,{"stream_name":"stdout","time":7132.657874829,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.01707‐10\n"}
+,{"stream_name":"stdout","time":7132.711839756,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.75.19.9210‐9228.2001\n"}
+,{"stream_name":"stdout","time":7132.909014212,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.00580‐08\n"}
+,{"stream_name":"stdout","time":7132.959585679,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.00022‐07\n"}
+,{"stream_name":"stdout","time":7133.012475523,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.01381‐12\n"}
+,{"stream_name":"stdout","time":7133.1137711,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.00465‐07\n"}
+,{"stream_name":"stdout","time":7133.16044627,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.01743‐09\n"}
+,{"stream_name":"stdout","time":7133.209289864,"data":"  skipping 404 on https://api.crossref.org/works/10.1186/s12977‐015‐0149‐5\n"}
+,{"stream_name":"stdout","time":7133.262882643,"data":"  skipping 404 on https://api.crossref.org/works/10.1182/blood‐2010‐05‐283770\n"}
+,{"stream_name":"stdout","time":7133.358621849,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.02689‐06\n"}
+,{"stream_name":"stdout","time":7133.460243799,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41467‐018‐07209‐7\n"}
+,{"stream_name":"stdout","time":7133.512131845,"data":"  skipping 404 on https://api.crossref.org/works/10.1111/j.1749‐6632.2000.tb05502.x\n"}
+,{"stream_name":"stdout","time":7133.562182145,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.01084‐10\n"}
+,{"stream_name":"stdout","time":7133.614093527,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.01879‐10\n"}
+,{"stream_name":"stdout","time":7133.70939791,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.06682‐11\n"}
+,{"stream_name":"stdout","time":7133.863961412,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.01144‐10\n"}
+,{"stream_name":"stdout","time":7133.918421705,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.07034‐11\n"}
+,{"stream_name":"stdout","time":7133.964107512,"data":"  skipping 404 on https://api.crossref.org/works/10.1128/jvi.00865‐13\n"}
+,{"stream_name":"stdout","time":7134.010087841,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s2352‐3018(20)30229‐0\n"}
+,{"stream_name":"stdout","time":7134.063528378,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41591‐020‐0774‐y\n"}
+,{"stream_name":"stdout","time":7134.465623781,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s0140‐6736(08)61591‐3\n"}
+,{"stream_name":"stdout","time":7134.512245618,"data":"  skipping 404 on https://api.crossref.org/works/10.1016/s1473‐3099(11)70098‐6\n"}
+,{"stream_name":"stdout","time":7134.712281069,"data":"  skipping 404 on https://api.crossref.org/works/10.1038/s41541‐024‐00876‐2\n"}
+,{"stream_name":"stdout","time":7167.064277529,"data":"  1175/1199\n"}
+,{"stream_name":"stdout","time":7235.648077625,"data":"  skipping 404 on https://api.crossref.org/works/10.23696/mcwt-fr58\n"}
+,{"stream_name":"stdout","time":7264.343698402,"data":"  skipping 404 on https://api.crossref.org/works/10.10520/ejc-1d6fb52217\n"}
+,{"stream_name":"stdout","time":7430.090412064,"data":"COMPLETE\n"}
+,{"stream_name":"stdout","time":7430.204680168,"data":"          papers    refs  unresolvable    per_1000\n"}
+,{"stream_name":"stdout","time":7430.20471636,"data":"group                                             \n"}
+,{"stream_name":"stdout","time":7430.20472116,"data":"artifact    1385   75239         10446  138.837571\n"}
+,{"stream_name":"stdout","time":7430.204725123,"data":"control     5904  311093         39565  127.180618\n"}
+,{"stream_name":"stdout","time":7430.429532946,"data":"\n"}
+,{"stream_name":"stdout","time":7430.429581548,"data":"=== RUN SUMMARY ===\n"}
+,{"stream_name":"stdout","time":7430.429587653,"data":"s05: ok\n"}
+,{"stream_name":"stdout","time":7430.429591823,"data":"ALL_OK\n"}
+,{"stream_name":"stdout","time":7430.436813746,"data":"17M\tdata\n"}
+,{"stream_name":"stdout","time":7430.436845713,"data":"\n"}
+,{"stream_name":"stderr","time":7433.34512315,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":7433.345158813,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":7433.767219017,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":7433.767249935,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":7434.927669183,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":7436.721059859,"data":"[NbConvertApp] Writing 286888 bytes to __results__.html\n"}
+]
