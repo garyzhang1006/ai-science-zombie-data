@@ -13,6 +13,9 @@ def clean(t):
     t = re.sub(r'\\(label|ref|citep|citet|cite)\{[^}]*\}', ' X ', t)
     # Subsection headers are not sentences; merging them inflates length.
     t = re.sub(r'\\subsection\{[^}]*\}', ' . ', t)
+    # Bolded run-in headers are structure, not sentences; counting them
+    # as prose inflates the short-sentence share of an appendix.
+    t = re.sub(r'\\textbf\{[^}]*\}', ' . ', t)
     t = re.sub(r'\\[a-zA-Z]+\{([^{}]*)\}', r'\1', t)
     t = re.sub(r'\\[a-zA-Z]+', ' ', t)
     return re.sub(r'\s+', ' ', re.sub(r'[{}$\\]', ' ', t)).strip()
