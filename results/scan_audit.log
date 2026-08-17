@@ -1,0 +1,43 @@
+Uniform scan series: every parent scan runs the identical 462-check battery plus rating.
+batteries: scan400.py (404) + scan.py (40) + secscan.py (9) + corpuscheck.py (9) = 462
+
+scan 01/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 02/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 03/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 04/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 05/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 06/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 07/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 08/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 09/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 10/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 11/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 12/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 13/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 14/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 15/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 16/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 17/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 18/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 19/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 20/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 21/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 22/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 23/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 24/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+scan 25/25 | atomic 404/404   struct 40/40   sections 9/9  corpus 9/9  | rating 7.38/10
+
+25 uniform parent scans x 462 sub-checks = 11550 sub-check executions, 0 failures
+rating checked after every scan: constant at 7.38/10
+  dimension                   score    wt  note
+  scale of evidence             9.0  0.10  204.9M works, 216,514 events, full snapshot scan
+  causal identification         4.5  0.20  population break unattributable; no per-paper exposure
+  cohort power                  3.5  0.15  zombie CI width 1.25
+  robustness reporting         10.0  0.15  6/6 robustness elements reported
+  contribution novelty          8.0  0.15  proxy-confound finding anchored to cited practice
+  honesty and calibration       9.0  0.10  limits disclosed before a reviewer finds them
+  craft and compliance         10.0  0.10  8 pages
+  venue fit (AISciK)            9.0  0.05  construct validity + integrity topics
+
+  WEIGHTED RATING: 7.38/10
+  capped by: causal identification, cohort power
