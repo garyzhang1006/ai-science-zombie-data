@@ -49,7 +49,9 @@
       "bound_nonai_lo": 0.0,
       "bound_nonai_hi": 0.005123238886632721,
       "n_feasible_grid_points": 16,
-      "attenuation_factor_max": 1.1354175079901703
+      "attenuation_factor_max": 1.1354175079901703,
+      "n_events_proxy_pos": 8,
+      "n_events_proxy_neg": 196
     },
     "40-60": {
       "n": 22074,
@@ -66,7 +68,9 @@
       "bound_nonai_lo": 0.004213853041875166,
       "bound_nonai_hi": 0.008236696651132545,
       "n_feasible_grid_points": 12,
-      "attenuation_factor_max": 1.0686581124134107
+      "attenuation_factor_max": 1.0686581124134107,
+      "n_events_proxy_pos": 8,
+      "n_events_proxy_neg": 184
     },
     "60-100": {
       "n": 14331,
@@ -83,7 +87,9 @@
       "bound_nonai_lo": 0.0,
       "bound_nonai_hi": 0.007883672039243167,
       "n_feasible_grid_points": 12,
-      "attenuation_factor_max": 1.113521453949167
+      "attenuation_factor_max": 1.113521453949167,
+      "n_events_proxy_pos": 11,
+      "n_events_proxy_neg": 134
     },
     "100-1000000": {
       "n": 5104,
@@ -100,8 +106,38 @@
       "bound_nonai_lo": 0.023116438356164382,
       "bound_nonai_hi": 0.02678571428571428,
       "n_feasible_grid_points": 8,
-      "attenuation_factor_max": 0.9974086682587268
+      "attenuation_factor_max": 0.9974086682587268,
+      "n_events_proxy_pos": 6,
+      "n_events_proxy_neg": 105
     }
+  },
+  "adjusted": {
+    "n": 78465,
+    "min_refs": 20,
+    "n_events": 652,
+    "n_events_proxy_pos": 33,
+    "proxy_odds_ratio": 1.3495736208832516,
+    "proxy_ci": [
+      0.9472930262308829,
+      1.9226880255107195
+    ],
+    "proxy_p": 0.09689051792666309,
+    "log_refs_odds_ratio": 2.212040402112045,
+    "log_refs_p": 2.1979325797164245e-38
+  },
+  "adjusted_full": {
+    "n": 629900,
+    "min_refs": 0,
+    "n_events": 750,
+    "n_events_proxy_pos": 41,
+    "proxy_odds_ratio": 1.5406964968364822,
+    "proxy_ci": [
+      1.1166323945835408,
+      2.1258076578098204
+    ],
+    "proxy_p": 0.00849785203105602,
+    "log_refs_odds_ratio": 3.71435566410165,
+    "log_refs_p": 0.0
   },
   "n_sample": 629900,
   "proxy_positive_share": 0.006158120336561359,

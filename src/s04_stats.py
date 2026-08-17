@@ -257,6 +257,42 @@ def corrected_rates(p_y_s1, p_y_s0, p_s1, sens, spec):
     return float(np.clip(a, 0, 1)), float(np.clip(b, 0, 1))
 
 
+def adjusted_association(scored, count_col, denom_col, min_refs=0):
+    """Logistic fit of the event indicator on the proxy and log references.
+
+    The stratified bounds rest on a handful of events per cell, so they
+    illustrate rather than establish. This is the test that decides whether
+    the proxy carries information about citation integrity once the
+    mechanical advantage of a long reference list is removed.
+    """
+    d = scored.dropna(subset=[count_col, denom_col])
+    d = d[d[denom_col] > 0]
+    if min_refs:
+        d = d[d[denom_col] >= min_refs]
+    if len(d) < 100 or d.proxy.nunique() < 2:
+        return None
+    X = sm.add_constant(pd.DataFrame({
+        "proxy": d.proxy.astype(int).values,
+        "log_refs": np.log(d[denom_col].values)}, index=d.index))
+    y = (d[count_col] > 0).astype(int)
+    try:
+        m = sm.Logit(y, X).fit(disp=0)
+    except Exception:
+        return None
+    ci = m.conf_int()
+    return {
+        "n": int(len(d)), "min_refs": int(min_refs),
+        "n_events": int(y.sum()),
+        "n_events_proxy_pos": int(y[d.proxy].sum()),
+        "proxy_odds_ratio": float(np.exp(m.params["proxy"])),
+        "proxy_ci": [float(np.exp(ci.loc["proxy", 0])),
+                     float(np.exp(ci.loc["proxy", 1]))],
+        "proxy_p": float(m.pvalues["proxy"]),
+        "log_refs_odds_ratio": float(np.exp(m.params["log_refs"])),
+        "log_refs_p": float(m.pvalues["log_refs"]),
+    }
+
+
 def bound_outcome(scored, count_col, denom_col, sens_grid=None,
                   spec_grid=None, min_refs=0):
     """Set-identified rates of carrying at least one event.
@@ -406,6 +442,18 @@ def main():
             r = bound_outcome(sub, "zombie_count", "n_refs")
             if r:
                 bounds["by_ref_stratum"][f"{lo}-{hi}"] = r
+        bounds["adjusted"] = adjusted_association(
+            lex, "zombie_count", "n_refs", min_refs=config.BOUNDS_MIN_REFS)
+        bounds["adjusted_full"] = adjusted_association(
+            lex, "zombie_count", "n_refs")
+        for k, v in bounds["by_ref_stratum"].items():
+            sub = lex[(lex.n_refs >= int(k.split("-")[0]))
+                      & (lex.n_refs < int(k.split("-")[1]))]
+            if v:
+                v["n_events_proxy_pos"] = int(
+                    (sub[sub.proxy].zombie_count > 0).sum())
+                v["n_events_proxy_neg"] = int(
+                    (sub[~sub.proxy].zombie_count > 0).sum())
         bounds["n_sample"] = int(len(lex))
         bounds["proxy_positive_share"] = float(lex.proxy.mean())
     bounds.update({"sens_grid": config.SENS_GRID,
