@@ -143,3 +143,26 @@ scan 21/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2 
 
   PASS  sits inside the corpus spread (centroid distance 0.81 <= max 3.75)
   PASS  not a clone of any single paper (nearest 1.50 >= min pairwise 0.97)
+
+=== final series, six batteries incl. content-humanizer scorer ===
+scan 01/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 02/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 03/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 04/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 05/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 06/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 07/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 08/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 09/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 10/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 11/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 12/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 13/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 14/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 15/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 16/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 17/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 18/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 19/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 20/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
+scan 21/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  humanity 82/100  | rating 7.38/10
