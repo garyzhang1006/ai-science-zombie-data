@@ -224,6 +224,145 @@ def c22(c):
     return "did not perform" in c["s"], "manual adjudication disclosed"
 
 
+
+
+# 23-40: humanizer patterns (Wikipedia "Signs of AI writing") ---------------
+
+def _hits(c, pat):
+    return re.findall(pat, c["plain"], re.I)
+
+
+@check("23 copula avoidance (serves as / stands as / boasts)")
+def c23(c):
+    h = _hits(c, r"\b(serves as|stands as|boasts a?|represents a|marks a)\b")
+    return not h, f"{h[:3] or 'clean'}"
+
+
+@check("24 significance inflation (testament / pivotal / turning point)")
+def c24(c):
+    h = _hits(c, r"\b(testament|pivotal|turning point|indelible|enduring|"
+                 r"reflects broader|setting the stage|marking a)\b")
+    return not h, f"{h[:3] or 'clean'}"
+
+
+@check("25 superficial -ing analyses")
+def c25(c):
+    h = _hits(c, r",\s+(highlighting|underscoring|emphasizing|reflecting|"
+                 r"symbolizing|showcasing|fostering|ensuring)\b")
+    return not h, f"{h[:3] or 'clean'}"
+
+
+@check("26 promotional language (vibrant / nestled / breathtaking)")
+def c26(c):
+    h = _hits(c, r"\b(vibrant|nestled|breathtaking|renowned|must-visit|"
+                 r"stunning|profound|exemplifies|commitment to)\b")
+    return not h, f"{h[:3] or 'clean'}"
+
+
+@check("27 vague attribution (experts argue / studies show)")
+def c27(c):
+    h = _hits(c, r"\b(experts (argue|say|believe)|observers have|"
+                 r"industry reports|some critics argue|it is believed)\b")
+    return not h, f"{h[:3] or 'clean'}"
+
+
+@check("28 no formulaic challenges/future-prospects section")
+def c28(c):
+    h = re.findall(r"\\section\{[^}]*(Challenges|Future Prospects|Future Outlook)", c["s"], re.I)
+    h += _hits(c, r"\bDespite these challenges\b")
+    return not h, f"{h[:2] or 'clean'}"
+
+
+@check("29 no synonym cycling on the core construct")
+def c29(c):
+    ours = ["lexical AI score", "lexical proxy", "AI proxy"]
+    used = [v for v in ours if v in c["s"]]
+    return len(used) <= 1, f"our-instrument variants: {used}"
+
+
+@check("30 no false ranges (from X to Y on a non-scale)")
+def c30(c):
+    h = _hits(c, r"\bfrom \w+ (and|to) \w+, from \w+ (and|to) \w+")
+    return not h, f"{h[:2] or 'clean'}"
+
+
+@check("31 straight quotes only (no curly)")
+def c31(c):
+    n = c["s"].count("\u201c") + c["s"].count("\u201d")
+    return n == 0, f"{n} curly"
+
+
+@check("32 no emojis")
+def c32(c):
+    n = len(re.findall(r"[\U0001F300-\U0001FAFF\u2600-\u27BF]", c["s"]))
+    return n == 0, f"{n} emoji"
+
+
+@check("33 boldface used sparingly in body")
+def c33(c):
+    n = len(re.findall(r"\\textbf\{", c["s"]))
+    return n <= 8, f"{n} bold runs"
+
+
+@check("34 sentence-case headings, not title case")
+def c34(c):
+    bad = []
+    for h in re.findall(r"\\(?:sub)?section\{([^}]+)\}", c["s"]):
+        words = [w for w in h.split() if w[:1].isalpha()]
+        caps = [w for w in words[1:] if w[0].isupper() and w.lower() not in
+                ("llm", "ai", "chatgpt", "openalex", "crossref", "retraction")]
+        if len(caps) >= 2:
+            bad.append(h)
+    return not bad, f"{bad or 'clean'}"
+
+
+@check("35 no filler phrases")
+def c35(c):
+    h = _hits(c, r"\b(in order to|due to the fact that|at this point in time|"
+                 r"has the ability to|it is important to note)\b")
+    return not h, f"{h[:3] or 'clean'}"
+
+
+@check("36 no persuasive authority tropes")
+def c36(c):
+    h = _hits(c, r"\b(the real question is|at its core|what really matters|"
+                 r"the deeper issue|the heart of the matter)\b")
+    return not h, f"{h[:3] or 'clean'}"
+
+
+@check("37 no signposting announcements")
+def c37(c):
+    h = _hits(c, r"\b(let's (dive|explore|break)|here's what you need|"
+                 r"without further ado|now let's look)\b")
+    return not h, f"{h[:2] or 'clean'}"
+
+
+@check("38 no fragmented header restatement")
+def c38(c):
+    bad = []
+    for m in re.finditer(r"\\(?:sub)?section\{([^}]+)\}\s*\n+([^\n]{0,90})\n", c["s"]):
+        first = m.group(2).strip()
+        if first and len(first.split()) < 9 and not first.startswith("\\"):
+            bad.append(m.group(1))
+    return not bad, f"{bad or 'clean'}"
+
+
+@check("39 no staccato runs (3+ consecutive short sentences)")
+def c39(c):
+    runs = 0
+    for i in range(len(c["lens"]) - 2):
+        if all(x < 12 for x in c["lens"][i:i + 3]):
+            runs += 1
+    return runs == 0, f"{runs} runs"
+
+
+@check("40 no aphorism formulas (X is the Y of Z)")
+def c40(c):
+    h = _hits(c, r"\bis the (language|currency|architecture|engine) of\b")
+    h += _hits(c, r"\bbecomes a trap\b")
+    return not h, f"{h[:2] or 'clean'}"
+
+
 def main():
     c = ctx()
     fails = 0
