@@ -41,3 +41,50 @@ rating checked after every scan: constant at 7.38/10
 
   WEIGHTED RATING: 7.38/10
   capped by: causal identification, cohort power
+
+=== post-revision uniform series ===
+scan 01/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 02/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 03/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 04/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 05/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 06/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 07/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 08/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 09/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 10/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 11/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 12/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 13/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 14/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 15/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 16/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 17/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 18/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 19/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+scan 20/20 | atomic 402/404   struct 39/40   sections 8/9  corpus 9/9  | rating 7.38/10
+
+=== final uniform series (post-rewrite) ===
+scan 01/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 02/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 03/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 04/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 05/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 06/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 07/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 08/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 09/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 10/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 11/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 12/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 13/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 14/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 15/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 16/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 17/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 18/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 19/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 20/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+scan 21/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
+
+corpus papers outside own IQR: 30%  |  my sections: 21%
