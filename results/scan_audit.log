@@ -113,3 +113,33 @@ scan 20/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38
 scan 21/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  | rating 7.38/10
 
 all 9 sections: 9/63 dimensions outside corpus IQR = 14%  (corpus papers themselves: 30%)
+
+=== final series, five batteries (467 checks) ===
+scan 01/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 02/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 03/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 04/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 05/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 06/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 07/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 08/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 09/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 10/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 11/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 12/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 13/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 14/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 15/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 16/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 17/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 18/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 19/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 20/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+scan 21/21 | atomic 404/404   struct 40/40   sect 9/9  corpus 9/9  perpaper 2/2  | rating 7.38/10
+
+  my distance to corpus centroid: 0.81
+  reference papers to centroid:   median 2.63 [1.43, 3.75]
+  typical distance between two reference papers: median 3.74
+
+  PASS  sits inside the corpus spread (centroid distance 0.81 <= max 3.75)
+  PASS  not a clone of any single paper (nearest 1.50 >= min pairwise 0.97)
