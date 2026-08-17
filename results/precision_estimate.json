@@ -1,0 +1,13 @@
+{
+ "n": 100,
+ "true_artifact": 68,
+ "filter_miss": 29,
+ "unclear": 3,
+ "precision_strict": 0.68,
+ "precision_excl_unclear": 0.7010309278350515,
+ "ci95": [
+  0.6099238902900362,
+  0.7921379653800668
+ ],
+ "method": "model adjudication on title and abstract, not human full-text review"
+}
